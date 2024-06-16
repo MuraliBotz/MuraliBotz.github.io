@@ -13,7 +13,7 @@
   }
   #content {
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
@@ -22,14 +22,15 @@
     z-index: 1;
     padding: 20px;
     animation: glow 2s infinite alternate;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
   }
   #header {
-    font-size: 40px;
+    font-size: 32px; /* Made the text smaller */
     color: gold;
     text-shadow: 0 0 20px gold;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 50px;
+    margin-bottom: 20px; /* Adjusted spacing */
+    margin-top: 20px;
     animation: glowText 5s infinite;
   }
   @keyframes glowText {
@@ -133,9 +134,7 @@
 <div id="content">
   <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block;">
   <div class="info">
-    <div>Name - Murali</div>
-    <div>Im From - India</div>
-    <div>I'm not a coder Just Do it For Fun</div>
+    <div>Hello there my name is MURALI</div>
   </div>
   <div class="buttons">
     <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button">Contact Me</a>
