@@ -134,19 +134,18 @@
     const particles = [];
     const numParticles = 30;
 
-    for (let i = 0; i < numParticles; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle', Math.random() < 0.5 ? 'circle' : 'square');
+    for (let i = 0; i < numShapes; i++) {
+      const shape = document.createElement('div');
+      shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
       const size = Math.random() * 50 + 10;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.top = `${Math.random() * 100}vh`;
-      particle.style.left = `${Math.random() * 100}vw`;
-      particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
-      particle.style.animationDelay = `${Math.random() * 5}s`;
-      document.body.appendChild(particle);
-      particles.push(particle);
-    }
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
+      shape.style.top = `${Math.random() * 100}vh`;
+      shape.style.left = `${Math.random() * 100}vw`;
+      shape.style.animationDuration = `${Math.random() * 10 + 10}s`; /* uthale re deva*/
+      shape.style.animationDelay = `${Math.random() * 5}s`; /* random delay */
+      document.body.appendChild(shape);
+} /* sachme dimag kharab hoga */
 
     // Update particle positions
     function updateParticles() {
