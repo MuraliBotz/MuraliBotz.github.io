@@ -9,11 +9,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
-    background-image: url('https://cdn.pixabay.com/photo/2017/01/29/22/44/space-2016917_960_720.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
   }
   #content {
     position: absolute;
@@ -106,20 +102,24 @@
       box-shadow: 0 0 30px red, 0 0 60px blue;
     }
   }
-  .flying-particle {
+  .shape {
     position: absolute;
-    background-color: white;
-    width: 5px;
-    height: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    animation: flyUp 5s linear forwards;
+    animation: float 10s infinite;
   }
-  @keyframes flyUp {
-    from {
-      transform: translateY(100vh);
+  .shape.square {
+    border-radius: 0;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
     }
-    to {
-      transform: translateY(-100vh);
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
   .gif-container {
@@ -146,44 +146,23 @@
 <div class="gif-container">
   <img src="https://media.giphy.com/media/8kbeqVDRmewJrFwGgW/giphy.gif" style="width: 400px; height: auto; display: block;">
 </div>
+
 <script>
-  const content = document.getElementById('content');
-  const width = content.offsetWidth;
-  const height = content.offsetHeight;
+  const shapes = ['circle', 'square'];
+  const numShapes = 30;
 
-  function createFlyingParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('flying-particle');
-    particle.style.width = '5px';
-    particle.style.height = '5px';
-    particle.style.backgroundColor = getRandomColor();
-    particle.style.position = 'absolute';
-    particle.style.left = Math.random() * width + 'px';
-    particle.style.bottom = '-50px';
-    content.appendChild(particle);
-
-    const duration = Math.random() * 6000 + 4000;
-    const targetY = Math.random() * height / 2;
-
-    particle.style.transition = `transform ${duration}ms linear`;
-    particle.style.transform = `translateY(-${targetY}px)`;
-
-    particle.addEventListener('transitionend', () => {
-      particle.remove();
-    });
-  }
-
-  setInterval(createFlyingParticle, 200);
-
-  function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  for (let i = 0; i < numShapes; i++) {
+    const shape = document.createElement('div');
+    shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
+    const size = Math.random() * 50 + 10;
+    shape.style.width = `${size}px`;
+    shape.style.height = `${size}px`;
+    shape.style.top = `${Math.random() * 100}vh`;
+    shape.style.left = `${Math.random() * 100}vw`;
+    shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
+    shape.style.animationDelay = `${Math.random() * 5}s`;
+    document.body.appendChild(shape);
   }
 </script>
 </body>
 </html>
-
