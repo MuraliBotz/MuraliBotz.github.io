@@ -12,22 +12,23 @@
     background: linear-gradient(135deg, #4a148c, #7b1fa2);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align content to the top */
     height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scroll */
   }
   #content {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    padding: 20px;
-    width: 400px;
-    height: 600px; /* Reverted box height */
+    padding: 40px;
+    width: 95%;
+    max-width: 900px;
+    max-height: 600px; /* Increased box height */
     text-align: center;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-top: 50px; /* Added margin from the top */
     animation: glow 2s infinite alternate;
   }
   .info {
@@ -44,21 +45,21 @@
   }
   .button {
     padding: 10px 20px;
-    border: 2px solid transparent;
+    border: none;
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    background-color: transparent;
+    background-color: #4caf50;
     margin: 0 5px;
-    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    box-shadow: 0 0 30px green; /* Increased glow */
   }
   .button:hover {
-    background-color: rgba(0, 128, 0, 0.5); /* Semi-transparent green background */
+    background-color: #45a049;
     box-shadow: 0 0 60px green; /* Increased glow */
-    border-color: green;
   }
   @keyframes glow {
     0% {
@@ -72,7 +73,7 @@
     position: absolute;
     border: 2px solid rgba(255, 255, 255, 0.2);
     background-color: transparent;
-    animation: move 5s infinite; /* Random floating animation */
+    animation: move 2.5s infinite; /* Increased speed */
   }
   .shape.circle {
     border-radius: 50%;
@@ -81,30 +82,6 @@
     border-radius: 0;
     width: 20px; /* Fixed size to ensure it's a square */
     height: 20px; /* Fixed size to ensure it's a square */
-  }
-  .shape.heart {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 15px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-  }
-  .shape.heart:before,
-  .shape.heart:after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 10px;
-    height: 16px;
-    border-radius: 10px 10px 0 0;
-    background: rgba(255, 255, 255, 0.2);
-  }
-  .shape.heart:before {
-    left: -10px;
-  }
-  .shape.heart:after {
-    right: -10px;
   }
   @keyframes move {
     0% {
@@ -115,7 +92,7 @@
     }
   }
   .float {
-    animation: float 2.5s infinite; /* Faster floating */
+    animation: float 5s infinite; /* Decreased duration for faster speed */
   }
   @keyframes float {
     0% {
@@ -137,7 +114,7 @@
 </head>
 <body>
 <div id="content">
-  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 400px; height: 400px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block; opacity: 1;">
+  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block; opacity: 1;">
   <div class="info">
     <div>Hello There My Name Is MURALI</div>
     <div>A Simple Pyrogram Bot Developer</div>
@@ -149,14 +126,15 @@
 </div>
 
 <script>
-  const shapes = ['circle', 'square', 'heart'];
+  const shapes = ['circle', 'square'];
   const numShapes = 30;
 
   for (let i = 0; i < numShapes; i++) {
     const shape = document.createElement('div');
     shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
+    shape.classList.add('float');
     const size = Math.random() * 50 + 10;
-    if (!shape.classList.contains('square') && !shape.classList.contains('heart')) {
+    if (!shape.classList.contains('square')) {
       shape.style.width = `${size}px`;
       shape.style.height = `${size}px`;
     }
