@@ -1,203 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Murali Website</title>
-    <style>
-      /* Import the custom font from Google Fonts */
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murali Website</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background: linear-gradient(135deg, #4a148c, #7b1fa2);
-        font-family: "Roboto", sans-serif; /* Apply Roboto font as fallback */
-        color: white;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; /* Align content to the top */
-        height: 100vh;
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #4a148c, #7b1fa2);
+      font-family: "Roboto", sans-serif;
+      color: white;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+    }
+
+    #content {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      padding: 40px;
+      width: 95%;
+      max-width: 900px;
+      max-height: 600px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .info {
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px white;
+      font-size: 1.5em;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .info div {
+      margin: 10px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background-color: transparent;
+      margin: 0 9px;
+      transition: box-shadow 1s;
+      cursor: pointer;
+      border: 2px solid transparent;
+      font-family: "Roboto", sans-serif;
+      animation: glowButton 4s infinite;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 20px green, 0 0 30px green;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 20px white, 0 0 40px white;
       }
+      100% {
+        box-shadow: 0 0 30px red, 0 0 60px blue;
+      }
+    }
+
+    @keyframes glowButton {
+      0% {
+        box-shadow: 0 0 20px red, 0 0 40px red;
+      }
+      50% {
+        box-shadow: 0 0 30px orange, 0 0 60px orange;
+      }
+      100% {
+        box-shadow: 0 0 20px red, 0 0 40px red;
+      }
+    }
+
+    .shape {
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      animation: move 15s infinite;
+    }
+
+    .shape.circle {
+      border-radius: 50%;
+    }
+
+    .shape.square {
+      border-radius: 0;
+      width: 15px;
+      height: 15px;
+    }
+
+    @keyframes move {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(200vw, 0);
+      }
+      50% {
+        transform: translate(200vw, 200vh);
+      }
+      75% {
+        transform: translate(0, 200vh);
+      }
+    }
+
+    .float {
+      animation: float 5s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 768px) {
       #content {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 20px;
         padding: 40px;
-        width: 95%;
-        max-width: 900px;
-        max-height: 600px; /* Increased box height */
-        text-align: center;
-        position: relative;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        margin-top: 50px; /* Added margin from the top */
-        animation: glow 2s infinite alternate;
       }
-      .info {
-        margin-bottom: 20px;
-        text-shadow: 0 0 10px white;
-        font-size: 1.5em; /* Increase text size */
-        font-family: "Roboto", sans-serif; /* Apply Roboto font */
-        font-weight: 700; /* Ensure bold font weight */
-        letter-spacing: 2px; /* Adjust letter spacing */
-        text-transform: uppercase; /* Uppercase text */
-      }
-      .info div {
-        margin: 10px 0;
-      }
-      .buttons {
-        display: flex;
-        justify-content: center;
-      }
-      .button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        background-color: transparent; /* Transparent background */
-        margin: 0 9px;
-        transition: box-shadow 1s;
-        cursor: pointer;
-        border: 2px solid transparent;
-        font-family: "Roboto", sans-serif; /* Apply Roboto font */
-        animation: glowButton 4s infinite; /* Infinite glowing effect */
-      }
-      .button:hover {
-        box-shadow: 0 0 20px green, 0 0 30px green; /* Green glow effect */
-      }
-      @keyframes glow {
-        0% {
-          box-shadow: 0 0 20px white, 0 0 40px white;
-        }
-        100% {
-          box-shadow: 0 0 30px red, 0 0 60px blue;
-        }
-      }
-      @keyframes glowButton {
-        0% {
-          box-shadow: 0 0 20px red, 0 0 40px red;
-        }
-        50% {
-          box-shadow: 0 0 30px orange, 0 0 60px orange;
-        }
-        100% {
-          box-shadow: 0 0 20px red, 0 0 40px red;
-        }
-      }
-      .shape {
-        position: absolute;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        background-color: transparent;
-        animation: move 15s infinite; /* Increased movement duration */
-      }
-      .shape.circle {
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <img
+      src="https://telegra.ph/file/87246399cb76bc869f59b.jpg"
+      style="
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
-      }
-      .shape.square {
-        border-radius: 0;
-        width: 15px; /* Fixed size to ensure it's a square */
-        height: 30px; /* Fixed size to ensure it's a square */
-      }
-      @keyframes move {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        25% {
-          transform: translate(200vw, 0); /* Increased horizontal movement */
-        }
-        50% {
-          transform: translate(200vw, 200vh); /* Increased diagonal movement */
-        }
-        75% {
-          transform: translate(0, 200vh); /* Increased vertical movement */
-        }
-      }
-      .float {
-        animation: float 5s infinite; /* Decreased duration for faster speed */
-      }
-      @keyframes float {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      @media (min-width: 768px) {
-        #content {
-          padding: 40px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="content">
-      <img
-        src="https://telegra.ph/file/87246399cb76bc869f59b.jpg"
-        style="
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          box-shadow: 0 0 20px pink;
-          margin: 0 auto 20px;
-          display: block;
-          /* opacity: 1; Remove opacity to ensure it's fully opaque */
-        "
-      />
-      <div class="info">
-        <div>ʜᴇʟʟᴏ ᴍʏ ɴᴀᴍᴇ Is ᴍᴜʀᴀʟi</div>
-        <div>ᴀ siᴍᴘʟᴇ ᴘʏʀᴏɢʀᴀᴍ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ</div>
-        <div>iᴍ ғʀᴏᴍ Iɴᴅiᴀ (Kᴀʀɴᴀᴛᴀᴋᴀ) 🇮🇳</div>
-      </div>
-      <div class="buttons">
-        <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button"
-          >Contact Me</a
-        >
-      </div>
+        box-shadow: 0 0 20px pink;
+        margin: 0 auto 20px;
+        display: block;
+      "
+    />
+    <div class="info">
+      <div>ʜᴇʟʟᴏ ᴍʏ ɴᴀᴍᴇ Is ᴍᴜʀᴀʟi</div>
+      <div>ᴀ siᴍᴘʟᴇ ᴘʏʀᴏɢʀᴀᴍ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ</div>
+      <div>iᴍ ғʀᴏᴍ Iɴᴅiᴀ (Kᴀʀɴᴀᴛᴀᴋᴀ) 🇮🇳</div>
     </div>
+    <div class="buttons">
+      <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button"
+        >Contact Me</a
+      >
+    </div>
+  </div>
 
-    <script>
-      const shapes = ["circle", "square"];
-      const numShapes = 30;
+  <script>
+    const shapes = ["circle", "square"];
+    const numShapes = 30;
 
-      for (let i = 0; i < numShapes; i++) {
-        const shape = document.createElement("div");
-        shape.classList.add(
-          "shape",
-          shapes[Math.floor(Math.random() * shapes.length)]
-        );
-        shape.classList.add("float");
-        const size = Math.random() * 50 + 10;
-        if (!shape.classList.contains("square")) {
-          shape.style.width = `${size}px`;
-          shape.style.height = `${size}px`;
-        }
-        shape.style.top = `${Math.random() * 100}vh`;
-        shape.style.left = `${Math.random() * 100}vw`;
-        shape.style.animationDuration = `${Math.random() * 5 + 5}s`; // Increased speed by reducing duration
-        shape.style.animationDelay = `${Math.random() * 3}s`;
-        document.body.appendChild(shape);
-      }
+    for (let i = 0; i < numShapes; i++) {
+      const shape = document.createElement("div");
+      shape.classList.add(
+        "shape",
+        shapes[Math.floor(Math.random() * shapes.length)]
+      );
+      shape.classList.add("float");
+      const size = Math.random() * 50 + 10;
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
+      shape.style.top = `${Math.random() * 100}vh`;
+      shape.style.left = `${Math.random() * 100}vw`;
+      shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      shape.style.animationDelay = `${Math.random() * 3}s`;
+      document.body.appendChild(shape);
+    }
 
-      const contactButton = document.getElementById("contact-button");
-      contactButton.addEventListener("mouseenter", function () {
-        contactButton.style.backgroundColor = "green";
-        contactButton.style.boxShadow = "0 0 20px green, 0 0 40px green";
-      });
+    const contactButton = document.getElementById("contact-button");
+    contactButton.addEventListener("mouseenter", function () {
+      contactButton.style.backgroundColor = "green";
+      contactButton.style.boxShadow = "0 0 20px green, 0 0 40px green";
+    });
 
-      contactButton.addEventListener("mouseleave", function () {
-        contactButton.style.backgroundColor = "transparent";
-        contactButton.style.boxShadow = "none";
-      });
-    </script>
-  </body>
+    contactButton.addEventListener("mouseleave", function () {
+      contactButton.style.backgroundColor = "transparent";
+      contactButton.style.boxShadow = "none";
+    });
+  </script>
+</body>
 </html>
 
