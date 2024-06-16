@@ -12,7 +12,7 @@
     background: linear-gradient(135deg, #4a148c, #7b1fa2);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
@@ -22,14 +22,12 @@
   #content {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    padding: 40px;
-    width: 95%;
-    max-width: 900px;
-    max-height: 600px; /* Increased box height */
+    padding: 20px;
+    width: 400px;
+    height: 600px; /* Reverted box height */
     text-align: center;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    margin-top: 50px;
     animation: glow 2s infinite alternate;
   }
   .info {
@@ -74,7 +72,7 @@
     position: absolute;
     border: 2px solid rgba(255, 255, 255, 0.2);
     background-color: transparent;
-    animation: move 2.5s infinite; /* Increased speed */
+    animation: move 5s infinite; /* Random floating animation */
   }
   .shape.circle {
     border-radius: 50%;
@@ -91,7 +89,6 @@
     border-right: 10px solid transparent;
     border-bottom: 15px solid rgba(255, 255, 255, 0.2);
     position: relative;
-    animation: move 2.5s infinite; /* Increased speed */
   }
   .shape.heart:before,
   .shape.heart:after {
@@ -118,7 +115,7 @@
     }
   }
   .float {
-    animation: float 5s infinite; /* Decreased duration for faster speed */
+    animation: float 2.5s infinite; /* Faster floating */
   }
   @keyframes float {
     0% {
@@ -158,7 +155,6 @@
   for (let i = 0; i < numShapes; i++) {
     const shape = document.createElement('div');
     shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
-    shape.classList.add('float');
     const size = Math.random() * 50 + 10;
     if (!shape.classList.contains('square') && !shape.classList.contains('heart')) {
       shape.style.width = `${size}px`;
