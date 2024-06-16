@@ -75,16 +75,18 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
     color: white;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
     background-color: #7b1fa2; /* Adjusted button color */
     margin: 10px; /* Added margin for spacing */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Initial glow effect */
   }
   .button:hover {
     background-color: #4a148c; /* Adjusted hover color */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8); /* Enhanced glow on hover */
   }
   @keyframes glow {
     0% {
@@ -96,9 +98,9 @@
   }
   .shape {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.4); /* Increased opacity */
     border-radius: 50%;
-    animation: float 10s infinite;
+    animation: float 5s infinite; /* Increased speed */
   }
   .shape.square {
     border-radius: 0;
@@ -142,7 +144,7 @@
     shape.style.height = `${size}px`;
     shape.style.top = `${Math.random() * 100}vh`;
     shape.style.left = `${Math.random() * 100}vw`;
-    shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
+    shape.style.animationDuration = `${Math.random() * 2.5 + 2.5}s`; /* Increased speed */
     shape.style.animationDelay = `${Math.random() * 5}s`;
     document.body.appendChild(shape);
   }
