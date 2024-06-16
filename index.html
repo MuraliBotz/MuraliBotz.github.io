@@ -10,63 +10,37 @@
     padding: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #4a148c, #7b1fa2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
   }
   #content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    border: 2px solid white;
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
     padding: 20px;
-    animation: glow 2s infinite alternate;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
   #header {
-    font-size: 32px; /* Made the text smaller */
-    color: gold;
-    text-shadow: 0 0 20px gold;
-    text-align: center;
-    margin-bottom: 20px; /* Adjusted spacing */
-    margin-top: 20px;
-    animation: glowText 5s infinite;
-  }
-  @keyframes glowText {
-    0% {
-      color: red;
-      text-shadow: 0 0 20px red;
-    }
-    25% {
-      color: blue;
-      text-shadow: 0 0 20px blue;
-    }
-    50% {
-      color: green;
-      text-shadow: 0 0 20px green;
-    }
-    75% {
-      color: yellow;
-      text-shadow: 0 0 20px yellow;
-    }
-    100% {
-      color: red;
-      text-shadow: 0 0 20px red;
-    }
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
   }
   .info {
-    color: white;
-    text-shadow: 0 0 10px white;
-    text-align: center;
-    font-size: 24px;
+    margin-bottom: 20px;
   }
   .info div {
     margin: 10px 0;
   }
   .buttons {
     display: flex;
-    justify-content: center; /* Center the button */
+    justify-content: center;
   }
   .button {
     padding: 10px 20px;
@@ -75,24 +49,14 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background-color 0.3s;
     color: white;
-    font-size: 16px;
-    text-align: center;
+    background-color: #7b1fa2;
+    margin: 0 5px;
+    transition: background-color 0.3s;
     cursor: pointer;
-    background-color: #7b1fa2; /* Adjusted button color */
-    margin: 10px; /* Added margin for spacing */
   }
   .button:hover {
-    background-color: #4a148c; /* Adjusted hover color */
-  }
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 20px white, 0 0 40px white;
-    }
-    100% {
-      box-shadow: 0 0 30px red, 0 0 60px blue;
-    }
+    background-color: #4a148c;
   }
   .shape {
     position: absolute;
@@ -114,21 +78,25 @@
       transform: translateY(0);
     }
   }
+  @media (min-width: 768px) {
+    #content {
+      padding: 40px;
+    }
+  }
 </style>
 </head>
 <body>
 <div id="content">
-  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 30px pink; margin: 0 auto 20px; display: block;">
+  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block;">
   <div class="info">
     <div>Hello There My Name Is MURALI</div>
     <div>A Simple Pyrogram Bot Developer</div>
-    <div>Im From India (Karnataka) </div>
+    <div>I'm From India (Karnataka)</div>
   </div>
   <div class="buttons">
     <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button">Contact Me</a>
   </div>
 </div>
-<div id="header">Welcome To My Portfolio</div>
 
 <script>
   const shapes = ['circle', 'square'];
@@ -145,7 +113,8 @@
     shape.style.animationDuration = `${Math.random() * 2 + 2}s`;
     shape.style.animationDelay = `${Math.random() * 2}s`;
     document.body.appendChild(shape);
-  } /* dimaag kharab*/
+  }
 </script>
 </body>
 </html>
+
