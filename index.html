@@ -1,162 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Murali Website</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: linear-gradient(135deg, #4a148c, #7b1fa2);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murali Website</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+  }
+  #content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border: 2px solid white;
+    z-index: 1;
+    padding: 20px;
+    animation: glow 2s infinite alternate;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  #header {
+    font-size: 32px; /* Made the text smaller */
+    color: gold;
+    text-shadow: 0 0 20px gold;
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted spacing */
+    margin-top: 20px;
+    animation: glowText 5s infinite;
+  }
+  @keyframes glowText {
+    0% {
+      color: red;
+      text-shadow: 0 0 20px red;
     }
-    #content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 400px;
-      height: 400px;
-      border: 2px solid white;
-      z-index: 1;
-      padding: 20px;
-      animation: glow 2s infinite alternate;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    25% {
+      color: blue;
+      text-shadow: 0 0 20px blue;
     }
-    #header {
-      font-size: 32px; /* Made the text smaller */
-      color: gold;
-      text-shadow: 0 0 20px gold;
-      text-align: center;
-      margin-bottom: 20px; /* Adjusted spacing */
-      margin-top: 20px;
-      animation: glowText 5s infinite;
+    50% {
+      color: green;
+      text-shadow: 0 0 20px green;
     }
-    @keyframes glowText {
-      0% {
-        color: red;
-        text-shadow: 0 0 20px red;
-      }
-      25% {
-        color: blue;
-        text-shadow: 0 0 20px blue;
-      }
-      50% {
-        color: green;
-        text-shadow: 0 0 20px green;
-      }
-      75% {
-        color: yellow;
-        text-shadow: 0 0 20px yellow;
-      }
-      100% {
-        color: red;
-        text-shadow: 0 0 20px red;
-      }
+    75% {
+      color: yellow;
+      text-shadow: 0 0 20px yellow;
     }
-   .info {
-      color: white;
-      text-shadow: 0 0 10px white;
-      text-align: center;
-      font-size: 24px;
+    100% {
+      color: red;
+      text-shadow: 0 0 20px red;
     }
-   .info div {
-      margin: 10px 0;
+  }
+  .info {
+    color: white;
+    text-shadow: 0 0 10px white;
+    text-align: center;
+    font-size: 24px;
+  }
+  .info div {
+    margin: 10px 0;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center; /* Center the button */
+  }
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #7b1fa2; /* Adjusted button color */
+    margin: 10px; /* Added margin for spacing */
+  }
+  .button:hover {
+    background-color: #4a148c; /* Adjusted hover color */
+  }
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px white, 0 0 40px white;
     }
-   .buttons {
-      display: flex;
-      justify-content: center; /* Center the button */
+    100% {
+      box-shadow: 0 0 30px red, 0 0 60px blue;
     }
-   .button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      color: white;
-      font-size: 16px;
-      text-align: center;
-      cursor: pointer;
-      background-color: #7b1fa2; /* Adjusted button color */
-      margin: 10px; /* Added margin for spacing */
+  }
+  .shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 10s infinite;
+  }
+  .shape.square {
+    border-radius: 0;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
     }
-   .button:hover {
-      background-color: #4a148c; /* Adjusted hover color */
+    50% {
+      transform: translateY(-20px);
     }
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 20px white, 0 0 40px white;
-      }
-      100% {
-        box-shadow: 0 0 30px red, 0 0 60px blue;
-      }
+    100% {
+      transform: translateY(0);
     }
-   .particle {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      animation: float 10s infinite;
-    }
-   .particle.square {
-      border-radius: 0;
-    }
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div id="content">
-    <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block;">
-    <div class="info">
-      <div>Hello There My Name Is MURALI</div>
-      <div>A Simple Pyrogram Bot Developer</div>
-      <div>Im From India (Karnataka) </div>
-    </div>
-    <div class="buttons">
-      <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button">Contact Me</a>
-    </div>
+<div id="content">
+  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block;">
+  <div class="info">
+    <div>Hello There My Name Is MURALI</div>
+    <div>A Simple Pyrogram Bot Developer</div>
+    <div>Im From India (Karnataka) </div>
   </div>
-  <div id="header">Welcome To My Portfolio</div>
+  <div class="buttons">
+    <a class="button" href="https://t.me/ZeroXCoderZ" id="contact-button">Contact Me</a>
+  </div>
+</div>
+<div id="header">Welcome To My Portfolio</div>
 
-  <script>
-    const particles = [];
-    const numParticles = 30;
+<script>
+  const shapes = ['circle', 'square', 'heart'];
+  const numShapes = 30;
 
-    for (let i = 0; i < numShapes; i++) {
-      const shape = document.createElement('div');
-      shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
-      const size = Math.random() * 50 + 10;
-      shape.style.width = `${size}px`;
-      shape.style.height = `${size}px`;
-      shape.style.top = `${Math.random() * 100}vh`;
-      shape.style.left = `${Math.random() * 100}vw`;
-      shape.style.animationDuration = `${Math.random() * 10 + 10}s`; /* uthale re deva*/
-      shape.style.animationDelay = `${Math.random() * 5}s`; /* random delay */
-      document.body.appendChild(shape);
-} /* sachme dimag kharab hoga */
-
-    // Update particle positions
-    function updateParticles() {
-      particles.forEach((particle) => {
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.left = `${Math.random() * 100}vw`;
-      });
-      requestAnimationFrame(updateParticles);
-    }
-
-    updateParticles();
-  </script>
+  for (let i = 0; i < numShapes; i++) {
+    const shape = document.createElement('div');
+    shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
+    const size = Math.random() * 50 + 10;
+    shape.style.width = `${size}px`;
+    shape.style.height = `${size}px`;
+    shape.style.top = `${Math.random() * 100}vh`;
+    shape.style.left = `${Math.random() * 100}vw`;
+    shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
+    shape.style.animationDelay = `${Math.random() * 5}s`;
+    document.body.appendChild(shape);
+  } /* dimaag kharab*/
+</script>
 </body>
 </html>
