@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Murali Website</title>
   <style>
+    /* Import the custom font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
     body {
       margin: 0;
       padding: 0;
       overflow: hidden;
       background: linear-gradient(135deg, #4a148c, #7b1fa2);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font */
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font as fallback */
       color: white;
       position: relative;
       display: flex;
@@ -35,6 +38,10 @@
       margin-bottom: 20px;
       text-shadow: 0 0 10px white;
       font-size: 1.5em; /* Increase text size */
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+      font-weight: 700; /* Ensure bold font weight */
+      letter-spacing: 2px; /* Adjust letter spacing */
+      text-transform: uppercase; /* Uppercase text */
     }
     .info div {
       margin: 10px 0;
@@ -56,6 +63,7 @@
       transition: box-shadow 0.3s;
       cursor: pointer;
       border: 2px solid transparent;
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     }
     .button:hover {
       box-shadow: 0 0 20px green, 0 0 40px green; /* Green glow effect */
@@ -72,10 +80,10 @@
       position: absolute;
       border: 2px solid rgba(255, 255, 255, 0.2);
       background-color: transparent;
-      animation: move 10s infinite; /* General movement animation */
+      animation: move 15s infinite; /* Increased movement duration */
     }
     .shape.circle {
-      border-radius: 60%;
+      border-radius: 50%;
     }
     .shape.square {
       border-radius: 0;
@@ -87,17 +95,17 @@
         transform: translate(0, 0);
       }
       25% {
-        transform: translate(100vw, 0);
+        transform: translate(200vw, 0); /* Increased horizontal movement */
       }
       50% {
-        transform: translate(100vw, 100vh);
+        transform: translate(200vw, 200vh); /* Increased diagonal movement */
       }
       75% {
-        transform: translate(0, 100vh);
+        transform: translate(0, 200vh); /* Increased vertical movement */
       }
     }
     .float {
-      animation: float 7s infinite; /* Decreased duration for faster speed */
+      animation: float 5s infinite; /* Decreased duration for faster speed */
     }
     @keyframes float {
       0% {
@@ -132,7 +140,7 @@
       "
     />
     <div class="info">
-      <div>Hello There My Name Is MURALI</div>
+      <div>ʜᴇʟʟᴏ There My Name Is MURALI</div>
       <div>A Simple Pyrogram Bot Developer</div>
       <div>I'm From India (Karnataka)</div>
     </div>
@@ -156,7 +164,7 @@
       }
       shape.style.top = `${Math.random() * 100}vh`;
       shape.style.left = `${Math.random() * 100}vw`;
-      shape.style.animationDuration = `${Math.random() * 2.8 + 2.8}s`; // Increased speed by reducing duration
+      shape.style.animationDuration = `${Math.random() * 5 + 5}s`; // Increased speed by reducing duration
       shape.style.animationDelay = `${Math.random() * 3}s`;
       document.body.appendChild(shape);
     }
