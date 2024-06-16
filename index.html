@@ -20,7 +20,58 @@
         height: 100vh;
       }
 
+      .shape {
+        position: absolute;
+        z-index: 1; /* Ensure shapes are behind the content */
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent;
+        animation: move 15s infinite;
+      }
+
+      .shape.circle {
+        border-radius: 50%;
+      }
+
+      .shape.square {
+        border-radius: 0;
+        width: 15px;
+        height: 15px;
+      }
+
+      @keyframes move {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(200vw, 0);
+        }
+        50% {
+          transform: translate(200vw, 200vh);
+        }
+        75% {
+          transform: translate(0, 200vh);
+        }
+      }
+
+      .float {
+        animation: float 5s infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
       #content {
+        z-index: 2; /* Ensure content is above the shapes */
         background: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         padding: 40px;
@@ -92,55 +143,6 @@
         }
         100% {
           box-shadow: 0 0 20px red, 0 0 40px red;
-        }
-      }
-
-      .shape {
-        position: absolute;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        background-color: transparent;
-        animation: move 15s infinite;
-      }
-
-      .shape.circle {
-        border-radius: 50%;
-      }
-
-      .shape.square {
-        border-radius: 0;
-        width: 15px;
-        height: 15px;
-      }
-
-      @keyframes move {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        25% {
-          transform: translate(200vw, 0);
-        }
-        50% {
-          transform: translate(200vw, 200vh);
-        }
-        75% {
-          transform: translate(0, 200vh);
-        }
-      }
-
-      .float {
-        animation: float 5s infinite;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0);
         }
       }
 
