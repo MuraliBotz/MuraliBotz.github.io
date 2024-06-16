@@ -12,11 +12,12 @@
     background: linear-gradient(135deg, #4a148c, #7b1fa2);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start;
     height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
   #content {
     background: rgba(0, 0, 0, 0.5);
@@ -28,7 +29,7 @@
     text-align: center;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    margin-top: 50px; /* Added margin from the top */
+    margin-top: 50px;
     animation: glow 2s infinite alternate;
   }
   .info {
@@ -45,21 +46,21 @@
   }
   .button {
     padding: 10px 20px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    background-color: #4caf50;
+    background-color: transparent;
     margin: 0 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
     cursor: pointer;
-    box-shadow: 0 0 30px green; /* Increased glow */
   }
   .button:hover {
-    background-color: #45a049;
+    background-color: rgba(0, 128, 0, 0.5); /* Semi-transparent green background */
     box-shadow: 0 0 60px green; /* Increased glow */
+    border-color: green;
   }
   @keyframes glow {
     0% {
@@ -82,6 +83,31 @@
     border-radius: 0;
     width: 20px; /* Fixed size to ensure it's a square */
     height: 20px; /* Fixed size to ensure it's a square */
+  }
+  .shape.heart {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    animation: move 2.5s infinite; /* Increased speed */
+  }
+  .shape.heart:before,
+  .shape.heart:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 16px;
+    border-radius: 10px 10px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .shape.heart:before {
+    left: -10px;
+  }
+  .shape.heart:after {
+    right: -10px;
   }
   @keyframes move {
     0% {
@@ -114,7 +140,7 @@
 </head>
 <body>
 <div id="content">
-  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block; opacity: 1;">
+  <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 400px; height: 400px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block; opacity: 1;">
   <div class="info">
     <div>Hello There My Name Is MURALI</div>
     <div>A Simple Pyrogram Bot Developer</div>
@@ -126,7 +152,7 @@
 </div>
 
 <script>
-  const shapes = ['circle', 'square'];
+  const shapes = ['circle', 'square', 'heart'];
   const numShapes = 30;
 
   for (let i = 0; i < numShapes; i++) {
@@ -134,7 +160,7 @@
     shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
     shape.classList.add('float');
     const size = Math.random() * 50 + 10;
-    if (!shape.classList.contains('square')) {
+    if (!shape.classList.contains('square') && !shape.classList.contains('heart')) {
       shape.style.width = `${size}px`;
       shape.style.height = `${size}px`;
     }
