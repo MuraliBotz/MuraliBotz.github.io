@@ -21,24 +21,19 @@
   #content {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
     text-align: center;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     margin-top: 50px; /* Added margin from the top */
     animation: glow 2s infinite alternate;
   }
-  #header {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px white;
-  }
   .info {
     margin-bottom: 20px;
     text-shadow: 0 0 10px white;
+    font-size: 1.5em; /* Increase text size */
   }
   .info div {
     margin: 10px 0;
@@ -75,12 +70,24 @@
   }
   .shape {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
     border-radius: 50%;
-    animation: float 10s infinite, move 5s infinite alternate;
+    animation: move 10s infinite;
   }
   .shape.square {
     border-radius: 0;
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(calc(100vw - 50px), calc(100vh - 50px));
+    }
+  }
+  .float {
+    animation: float 20s infinite;
   }
   @keyframes float {
     0% {
@@ -93,14 +100,6 @@
       transform: translateY(0);
     }
   }
-  @keyframes move {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(calc(100vw - 50px), calc(100vh - 50px));
-    }
-  }
   @media (min-width: 768px) {
     #content {
       padding: 40px;
@@ -111,7 +110,6 @@
 <body>
 <div id="content">
   <img src="https://telegra.ph/file/87246399cb76bc869f59b.jpg" style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 0 20px pink; margin: 0 auto 20px; display: block;">
-  <div id="header">Welcome To My Portfolio</div>
   <div class="info">
     <div>Hello There My Name Is MURALI</div>
     <div>A Simple Pyrogram Bot Developer</div>
@@ -129,12 +127,13 @@
   for (let i = 0; i < numShapes; i++) {
     const shape = document.createElement('div');
     shape.classList.add('shape', shapes[Math.floor(Math.random() * shapes.length)]);
+    shape.classList.add('float');
     const size = Math.random() * 50 + 10;
     shape.style.width = `${size}px`;
     shape.style.height = `${size}px`;
     shape.style.top = `${Math.random() * 100}vh`;
     shape.style.left = `${Math.random() * 100}vw`;
-    shape.style.animationDuration = `${Math.random() * 2 + 2}s`;
+    shape.style.animationDuration = `${Math.random() * 20 + 10}s`; // Slower movement
     shape.style.animationDelay = `${Math.random() * 2}s`;
     document.body.appendChild(shape);
   }
