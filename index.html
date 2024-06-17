@@ -6,23 +6,27 @@
     <title>Murali Website</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: white;
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         height: 100vh;
+        background: black;
+        padding-top: 20px;
       }
 
       .shape {
         position: absolute;
-        z-index: 1; /* Ensure shapes are behind the content */
+        z-index: 1;
         border: 2px solid rgba(255, 255, 255, 0.2);
         background-color: transparent;
         animation: move 15s infinite;
@@ -71,88 +75,100 @@
       }
 
       #content {
-        z-index: 2; /* Ensure content is above the shapes */
+        z-index: 2;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
-        padding: 40px;
-        width: 80%;
-        max-width: 900px;
-        height: 50vh; /* Decreased height */
-        max-height: 500px; /* Decreased max-height */
+        padding: 20px;
+        width: 50%;
+        max-width: 700px;
         text-align: center;
-        position: relative;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        margin-top: 50px;
-        animation: glow 2s infinite alternate;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(1.2);
       }
 
       .info {
-        margin-bottom: 20px;
         text-shadow: 0 0 2px white;
-        font-size: 1.1em;
+        font-size: 2.5em;
         font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
-
-      .info div {
-        margin: 10px 0;
-      }
-
-      .buttons {
-        display: flex;
-        justify-content: center;
-      }
-
-      .button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
         font-weight: bold;
         text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        background-color: transparent;
-        margin: 0 9px;
-        transition: box-shadow 1s;
-        cursor: pointer;
-        border: 2px solid transparent;
-        font-family: "Roboto", sans-serif;
-        animation: glowButton 4s infinite;
-      }
-
-      .button:hover {
-        box-shadow: 0 0 20px green, 0 0 30px green;
-      }
-
-      @keyframes glow {
-        0% {
-          box-shadow: 0 0 20px white, 0 0 40px white;
-        }
-        100% {
-          box-shadow: 0 0 30px red, 0 0 60px blue;
-        }
-      }
-
-      @keyframes glowButton {
-        0% {
-          box-shadow: 0 0 20px red, 0 0 40px red;
-        }
-        50% {
-          box-shadow: 0 0 30px orange, 0 0 60px orange;
-        }
-        100% {
-          box-shadow: 0 0 20px red, 0 0 40px red;
-        }
       }
 
       .underlined-text {
         text-decoration: underline;
-        text-decoration-color: orange; /*  color  for underline hehe */
+        text-decoration-color: orange;
         text-shadow: 0 0 20px blue;
-        font-weight: bold;
-        font-size: 1.7em;
+      }
+
+      .about-me-title {
+        font-size: 2em;
+        text-decoration: underline;
+        text-decoration-color: green;
+        text-shadow: 0 0 10px yellow;
+        animation: glow 1s infinite alternate;
+        font-family: "Lobster", cursive;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 100%;
+      }
+
+      .about-me-text {
+        font-size: 1.1em;
+        line-height: 1.5;
+        text-align: left;
+        font-family: "Poppins", sans-serif;
+        width: 80%;
+        margin-left: 0px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .github-stats-container {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 0px;
+      }
+
+      .github-stats {
+        width: 100%;
+        opacity: 0.8;
+      }
+
+      .github-stats-text {
+        font-size: 1.5em;
+        text-decoration: underline;
+        text-decoration-color: orange;
+        text-shadow: 0 0 10px green;
+        animation: githubGlow 1s infinite alternate;
+        font-family: "Lobster", cursive;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: -40px;
+        width: 100%;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+        }
+        to {
+          text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+        }
+      }
+
+      @keyframes githubGlow {
+        from {
+          text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
+        }
+        to {
+          text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+        }
       }
 
       @media (min-width: 768px) {
@@ -172,22 +188,29 @@
           height: 200px;
           border-radius: 50%;
           box-shadow: 0 0 20px pink;
-          margin: 0 auto 20px;
-          display: block;
+          margin-bottom: 20px;
         "
       />
       <div class="info">
         <div class="underlined-text">𝑴𝑼𝑹𝑨𝑳𝑰</div>
-        <div>𝐇𝐞𝐥𝐥𝐨 𝐓𝐡𝐢𝐬 𝐈𝐬 𝐌𝐲 𝐅𝐢𝐫𝐬𝐭 𝐏𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨 𝐎𝐟 𝐆𝐢𝐭𝐇𝐮𝐛</div>
-        <div>𝐈'𝐦 𝐍𝐨𝐭 𝐀 𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫 𝐈 𝐉𝐮𝐬𝐭 𝐃𝐨 𝐓𝐡𝐢𝐬 𝐅𝐨𝐫 𝐌𝐲 𝐓𝐢𝐦𝐞𝐩𝐚𝐬𝐬 🕛</div>
-        <div>𝐈'𝐦 𝐅𝐫𝐨𝐦 𝐈𝐧𝐝𝐢𝐚, 𝐊𝐚𝐫𝐧𝐚𝐭𝐚𝐤𝐚 🇮🇳</div>
-        <div>𝐉𝐨𝐢𝐧 @MuraliBotz 𝐎𝐧 𝐓𝐠 𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬</div>
       </div>
-      <div class="buttons">
-        <a class="button" href="https://t.me/MuraliBotz" id="contact-button"
-          >Contact Me</a
-        >
-      </div>
+    </div>
+    <div class="about-me-title">About Me</div>
+    <p class="about-me-text">
+      Hello Everyone My Name Is Murali, I'm A Student, I'm Not A Pro Coder. I
+      Just Do this Only For My Timepass And I Have A Channel Named @MuraliBotz
+      On Telegram. I will upload my all bots And Codes There You Can Join. I
+      Live In India From Karnataka State 🇮🇳, And My Age Is 16. If You Have Any
+      Questions Dm Me On Telegram Thank You
+    </p>
+
+    <div class="github-stats-container">
+      <p class="github-stats-text">GitHub Stats</p>
+      <img
+        class="github-stats"
+        src="https://github-readme-stats.vercel.app/api?username=ZeroXCoderZ&show_icons=true&theme=transparent&text_color=ffffff"
+        alt="GitHub Stats"
+      />
     </div>
 
     <script>
@@ -220,18 +243,6 @@
         document.body.appendChild(shape);
       }
 
-      const contactButton = document.getElementById("contact-button");
-      contactButton.addEventListener("mouseenter", function () {
-        contactButton.style.backgroundColor = "green";
-        contactButton.style.boxShadow = "0 0 20px green, 0 0 40px green";
-      });
-
-      contactButton.addEventListener("mouseleave", function () {
-        contactButton.style.backgroundColor = "transparent";
-        contactButton.style.boxShadow = "none";
-      });
-
-      // Randomly set one of the provided image URLs
       const imageUrls = [
         "https://telegra.ph/file/e2b426aa61c95fa7e4a3b.jpg",
         "https://telegra.ph/file/88052305245bd12138fae.jpg",
