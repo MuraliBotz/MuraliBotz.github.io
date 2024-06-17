@@ -164,8 +164,8 @@
 </head>
 <body>
   <div id="content">
-    <img
-      src="https://telegra.ph/file/87246399cb76bc869f59b.jpg"
+    <img id="random-image"
+      src=""
       style="
         width: 200px;
         height: 200px;
@@ -223,8 +223,16 @@
       contactButton.style.backgroundColor = "transparent";
       contactButton.style.boxShadow = "none";
     });
+
+    // Randomly set one of the provided image URLs
+    const imageUrls = [
+      "https://telegra.ph/file/e2b426aa61c95fa7e4a3b.jpg",
+      "https://telegra.ph/file/88052305245bd12138fae.jpg",
+      "https://telegra.ph/file/87246399cb76bc869f59b.jpg"
+    ];
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+    document.getElementById("random-image").src = randomImageUrl;
   </script>
 </body>
 </html>
-
 
