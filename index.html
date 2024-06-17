@@ -153,6 +153,29 @@
         width: 100%;
       }
 
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        margin: 0 10px;
+      }
+
+      .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: drop-shadow(0 0 5px white);
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white), drop-shadow(0 0 15px white);
+      }
+
       @keyframes glow {
         from {
           text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
@@ -211,6 +234,13 @@
         src="https://github-readme-stats.vercel.app/api?username=ZeroXCoderZ&show_icons=true&theme=transparent&text_color=ffffff"
         alt="GitHub Stats"
       />
+    </div>
+
+    <div class="social-icons">
+      <a href=""><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a>
+      <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
+      <a href=""><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
+      <a href=""><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
     </div>
 
     <script>
