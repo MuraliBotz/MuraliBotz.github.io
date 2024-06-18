@@ -1,229 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Murali Website</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: "Poppins", sans-serif;
-            color: white;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            background: black;
-            padding-top: 20px;
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background: black;
+        padding-top: 20px;
+      }
+
+      .shape {
+        position: absolute;
+        z-index: 1;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent;
+        animation: move 15s infinite;
+      }
+
+      .shape.circle {
+        border-radius: 50%;
+      }
+
+      .shape.square {
+        border-radius: 0;
+        width: 15px;
+        height: 15px;
+      }
+
+      @keyframes move {
+        0%,
+        100% {
+          transform: translate(0, 0);
         }
-
-        .shape {
-            position: absolute;
-            z-index: 1;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            background-color: transparent;
-            animation: move 15s infinite;
+        25% {
+          transform: translate(200vw, 0);
         }
-
-        .shape.circle {
-            border-radius: 50%;
+        50% {
+          transform: translate(200vw, 200vh);
         }
-
-        .shape.square {
-            border-radius: 0;
-            width: 15px;
-            height: 15px;
+        75% {
+          transform: translate(0, 200vh);
         }
+      }
 
-        @keyframes move {
-            0%,
-            100% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(200vw, 0);
-            }
-            50% {
-                transform: translate(200vw, 200vh);
-            }
-            75% {
-                transform: translate(0, 200vh);
-            }
+      .float {
+        animation: float 5s infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
         }
-
-        .float {
-            animation: float 5s infinite;
+        50% {
+          transform: translateY(-20px);
         }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+        100% {
+          transform: translateY(0);
         }
+      }
 
+      #content {
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 20px;
+        width: 50%;
+        max-width: 700px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(1.2);
+      }
+
+      .info {
+        text-shadow: 0 0 2px white;
+        font-size: 1.9em;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .underlined-text {
+        text-decoration: underline;
+        text-decoration-color: orange;
+        text-shadow: 0 0 40px blue;
+      }
+
+      .about-me-title {
+        font-size: 2em;
+        text-decoration: underline;
+        text-decoration-color: green;
+        text-shadow: 0 0 10px yellow;
+        animation: glow 1s infinite alternate;
+        font-family: "Lobster", cursive;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 100%;
+      }
+
+      .about-me-text {
+        font-size: 1.1em;
+        line-height: 1.5;
+        text-align: left;
+        font-family: "Poppins", sans-serif;
+        width: 80%;
+        margin-left: 0px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .github-stats-container {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 0px;
+      }
+
+      .github-stats {
+        width: 100%;
+        opacity: 0.8;
+        border-radius: 10px;
+        animation: githubGlowBlue 3s infinite alternate;
+      }
+
+      @keyframes githubGlowBlue {
+        0% {
+          box-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff,
+            0 0 40px #0000ff;
+        }
+        100% {
+          box-shadow: 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff,
+            0 0 50px #0000ff;
+        }
+      }
+
+      .github-stats-text {
+        font-size: 1.5em;
+        text-decoration: underline;
+        text-decoration-color: orange;
+        text-shadow: 0 0 10px green;
+        animation: githubGlow 1s infinite alternate;
+        font-family: "Lobster", cursive;
+        text-align: left;
+        margin-top: 40px;
+        margin-left: -40px;
+        width: 100%;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        margin: 0 10px;
+      }
+
+      .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: drop-shadow(0 0 5px white);
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white),
+          drop-shadow(0 0 15px white);
+      }
+
+      .footer {
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        margin-top: auto;
+        font-size: 1em;
+        color: white;
+        text-shadow: 0 0 5px white;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+        }
+        to {
+          text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+        }
+      }
+
+      @keyframes githubGlow {
+        from {
+          text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
+        }
+        to {
+          text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+        }
+      }
+
+      @media (min-width: 768px) {
         #content {
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-            padding: 20px;
-            width: 50%;
-            max-width: 700px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: scale(1.2);
+          padding: 40px;
         }
-
-        .info {
-            text-shadow: 0 0 2px white;
-            font-size: 1.9em;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .underlined-text {
-            text-decoration: underline;
-            text-decoration-color: orange;
-            text-shadow: 0 0 40px blue;
-        }
-
-        .about-me-title {
-            font-size: 2em;
-            text-decoration: underline;
-            text-decoration-color: green;
-            text-shadow: 0 0 10px yellow;
-            animation: glow 1s infinite alternate;
-            font-family: "Lobster", cursive;
-            text-align: left;
-            margin-top: 40px;
-            margin-left: 40px;
-            width: 100%;
-        }
-
-        .about-me-text {
-            font-size: 1.1em;
-            line-height: 1.5;
-            text-align: left;
-            font-family: "Poppins", sans-serif;
-            width: 80%;
-            margin-left: 0px;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .github-stats-container {
-            margin-top: 20px;
-            width: 80%;
-            margin-left: 0px;
-        }
-
-        .github-stats {
-            width: 100%;
-            opacity: 0.8;
-            border-radius: 10px;
-            animation: randomGlow 3s infinite alternate;
-        }
-
-        @keyframes randomGlow {
-            0% {
-                box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-            }
-            25% {
-                box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
-            }
-            50% {
-                box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-            }
-            75% {
-                box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
-            }
-            100% {
-                box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00;
-            }
-        }
-
-        .github-stats-text {
-            font-size: 1.5em;
-            text-decoration: underline;
-            text-decoration-color: orange;
-            text-shadow: 0 0 10px green;
-            animation: githubGlow 1s infinite alternate;
-            font-family: "Lobster", cursive;
-            text-align: left;
-            margin-top: 40px;
-            margin-left: -40px;
-            width: 100%;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            filter: drop-shadow(0 0 5px white);
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white), drop-shadow(0 0 15px white);
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
-            }
-            to {
-                text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
-            }
-        }
-
-        @keyframes githubGlow {
-            from {
-                text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
-            }
-            to {
-                text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
-            }
-        }
-
-        @media (min-width: 768px) {
-            #content {
-                padding: 40px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-<div id="content">
-    <img
+  </head>
+  <body>
+    <div id="content">
+      <img
         id="random-image"
         src=""
         style="
@@ -233,41 +246,57 @@
           box-shadow: 0 0 20px pink;
           margin-bottom: 20px;
         "
-    />
-    <div class="info">
+      />
+      <div class="info">
         <div class="underlined-text">𝑴𝑼𝑹𝑨𝑳𝑰</div>
+      </div>
     </div>
-</div>
-<div class="about-me-title">About Me</div>
-<p class="about-me-text">
-    Hello Everyone My Name Is Murali, I'm A Student, I'm Not A Pro Coder. I
-    Just Do this Only For My Timepass And I Have A Channel Named @MuraliBotz
-    On Telegram. I will upload my all bots And Codes There You Can Join. I
-    Live In India From Karnataka State 🇮🇳, And My Age Is 16. If You Have Any
-    Questions Dm Me On Telegram Thank You
-</p>
+    <div class="about-me-title">About Me</div>
+    <p class="about-me-text">
+      Hello Everyone My Name Is Murali, I'm A Student, I'm Not A Pro Coder. I
+      Just Do this Only For My Timepass And I Have A Channel Named @MuraliBotz
+      On Telegram. I will upload my all bots And Codes There You Can Join. I
+      Live In India From Karnataka State 🇮🇳, And My Age Is 16. If You Have Any
+      Questions Dm Me On Telegram Thank You
+    </p>
 
-<div class="github-stats-container">
-    <p class="github-stats-text">GitHub Stats</p>
-    <img
+    <div class="github-stats-container">
+      <p class="github-stats-text">GitHub Stats</p>
+      <img
         class="github-stats"
         src="https://github-readme-stats.vercel.app/api?username=ZeroXCoderZ&show_icons=true&theme=transparent&text_color=ffffff"
         alt="GitHub Stats"
-    />
-</div>
+      />
+    </div>
 
-<div class="social-icons">
-    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a>
-    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
-    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
-    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
-</div>
+    <div class="social-icons">
+      <a href=""
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+          alt="GitHub"
+      /></a>
+      <a href=""
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+          alt="Telegram"
+      /></a>
+      <a href=""
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+          alt="Email"
+      /></a>
+      <a href=""
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+          alt="Instagram"
+      /></a>
+    </div>
 
-<script>
-    const shapes = ["circle", "square"];
-    const numShapes = 30;
+    <script>
+      const shapes = ["circle", "square"];
+      const numShapes = 30;
 
-    const backgrounds = [
+      const backgrounds = [
         "linear-gradient(135deg, #1e3c72, #2a5298)",
         "linear-gradient(135deg, #9d50bb, #6e48aa)",
         "linear-gradient(135deg, #2b5876, #4e4376)",
@@ -275,16 +304,16 @@
         "linear-gradient(135deg, #8e0e00, #1f1c18)",
         "linear-gradient(135deg, #2b5876, #4e4376)",
         "linear-gradient(135deg, #404040, #1b1b1b)",
-    ];
+      ];
 
-    document.body.style.background =
+      document.body.style.background =
         backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
-    for (let i = 0; i < numShapes; i++) {
+      for (let i = 0; i < numShapes; i++) {
         const shape = document.createElement("div");
         shape.classList.add(
-            "shape",
-            shapes[Math.floor(Math.random() * shapes.length)]
+          "shape",
+          shapes[Math.floor(Math.random() * shapes.length)]
         );
         shape.classList.add("float");
         const size = Math.random() * 50 + 10;
@@ -295,17 +324,17 @@
         shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
         shape.style.animationDelay = `${Math.random() * 3}s`;
         document.body.appendChild(shape);
-    }
+      }
 
-    const imageUrls = [
+      const imageUrls = [
         "https://telegra.ph/file/e2b426aa61c95fa7e4a3b.jpg",
         "https://telegra.ph/file/88052305245bd12138fae.jpg",
         "https://telegra.ph/file/87246399cb76bc869f59b.jpg",
-    ];
-    const randomImageUrl =
+      ];
+      const randomImageUrl =
         imageUrls[Math.floor(Math.random() * imageUrls.length)];
-    document.getElementById("random-image").src = randomImageUrl;
-</script>
-</body>
+      document.getElementById("random-image").src = randomImageUrl;
+    </script>
+  </body>
 </html>
 
