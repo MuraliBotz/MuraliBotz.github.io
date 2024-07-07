@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Everything Fixed By @MuraliBotz */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    padding-top: 20px;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#content {
+    display: none;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1.2);
+}
+
+.shape {
+    position: absolute;
+    z-index: 1;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    animation: move 15s infinite;
+}
+
+.shape.circle {
+    border-radius: 50%;
+}
+
+.shape.square {
+    border-radius: 0;
+    width: 15px;
+    height: 15px;
+}
+
+@keyframes move {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200vw, 0);
+    }
+    50% {
+        transform: translate(200vw, 200vh);
+    }
+    75% {
+        transform: translate(0, 200vh);
+    }
+}
+
+.float {
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.info {
+    text-shadow: 0 0 2px white;
+    font-size: 1.9em;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-shadow: 0 0 40px blue;
+}
+
+.about-me-title {
+    font-size: 2em;
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-shadow: 0 0 10px yellow;
+    animation: glow 1s infinite alternate;
+    font-family: "Lobster", cursive;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100%;
+}
+
+.about-me-text {
+    font-size: 1.5em;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 100%;
+}
+
+.github-stats-container {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 0px;
+}
+
+.github-stats {
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 10px;
+    animation: githubGlowBlue 3s infinite alternate;
+}
+
+
+.github-stats:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px blue;
+}
+
+.github-stats-text {
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-shadow: 0 0 10px green;
+    animation: githubGlow 1s infinite alternate;
+    font-family: "Lobster", cursive;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: -40px;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white),
+        drop-shadow(0 0 15px white);
+}
+
+.footer {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin-top: auto;
+    font-size: 1em;
+    color: white;
+    text-shadow: 0 0 5px white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    }
+    to {
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+    }
+}
+
+@keyframes githubGlow {
+    from {
+        text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
+    }
+    to {
+        text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+    }
+}
+
+@media (min-width: 768px) {
+    #content {
+        padding: 40px;
+    }
+}
+
+#random-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px pink;
+    margin-bottom: 20px;
+}
+
+/* Loading Screen Styles */
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#h3 {
+  color: white;
+}
+
+#ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#ring:nth-child(1) {
+  border-bottom: 8px solid rgb(255, 141, 249);
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#ring:nth-child(2) {
+  border-bottom: 8px solid rgb(255,65,106);
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#ring:nth-child(3) {
+  border-bottom: 8px solid rgb(0,255,255);
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#ring:nth-child(4) {
+  border-bottom: 8px solid rgb(252, 183, 55);
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+
