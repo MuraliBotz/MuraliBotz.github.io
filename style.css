@@ -117,7 +117,7 @@ body {
 
 .about-me-text {
   font-size: 1.2em;
-  font-family: "Roboto", sans-serif;
+ /* font-family: "Roboto", sans-serif;0 */
   text-align: left;
   margin-top: 10px;
   margin-left: 40px;
