@@ -8,17 +8,18 @@
 </head>
 <body>
     <div id="loading-screen">
-        <div id="page">
-            <div id="container">
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="h3">loading</div>
-            </div>
+    <div id="page">
+        <div id="container">
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="h3">loading</div>
         </div>
     </div>
-    <div id="content">
+    </div>
+
+    <div id="content" style="display: none;">
         <img id="random-image" src="" />
         <div class="info">
             <div class="underlined-text">𝑴𝑼𝑹𝑨𝑳𝑰</div>
@@ -117,11 +118,14 @@
         document.getElementById("random-image").src = randomImageUrl;
 
         window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.opacity = '0';
             setTimeout(() => {
                 document.getElementById('loading-screen').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            }, 3000);
-        });
+            }, 500); // Allow time for the fade-out transition
+        }, 3000);
+    });
     </script>
 </body>
 </html>
