@@ -19,34 +19,25 @@ body {
 }
 
 #loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    background: black;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
 }
 
 #content {
     display: none;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    padding: 20px;
-    width: 50%;
-    max-width: 700px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(1.2);
 }
+
 
 .shape {
     position: absolute;
