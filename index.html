@@ -18,57 +18,28 @@
             </div>
         </div>
     </div>
-    <div id="content">
-        <img id="random-image" src="" />
+
+    <div id="content" style="display: none;">
+        <img id="random-image" src="" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin-bottom: 20px;" />
         <div class="info">
             <div class="underlined-text">𝑴𝑼𝑹𝑨𝑳𝑰</div>
         </div>
-    </div>
-    <div class="about-me-title">About Me</div>
-    <p class="about-me-text">
-        Hello Everyone My Name Is Murali, I'm A Student, I'm Not A Pro Coder. I
-        Just Do this Only For My Timepass And I Have A Channel Named @MuraliBotz
-        On Telegram. I will upload my all bots And Codes There You Can Join. I
-        Live In India From Karnataka State 🇮🇳, And My Age Is 16. If You Have Any
-        Questions Dm Me On Telegram ~Thank You
-    </p>
-
-    <div class="github-stats-container">
-        <p class="github-stats-text">My GitHub Stats</p>
-        <a href="https://github.com/MURALIBOTZ" target="_blank">
-            <img
-                class="github-stats"
-                src="https://github-readme-stats.vercel.app/api?username=MuraliBotz&count_private=true&show_icons=true&theme=chartreuse-dark&custom_title=MuraliBotz+Github+Stats&include_all_commits=true&hide_border=true&bg_color=000000"
-                alt="GitHub Stats"
-            />
-        </a>
-    </div>
-
-    <div class="social-icons">
-        <a href="https://github.com/MuraliBotz" target="_blank">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="GitHub"
-            />
-        </a>
-        <a href="https://t.me/MuraliBotz" target="_blank">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
-                alt="Telegram"
-            />
-        </a>
-        <a href="mailto:muralimurali3211260@gmail.com" target="_blank">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                alt="Email"
-            />
-        </a>
-        <a href="https://www.instagram.com/MuraliBotz" target="_blank">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
-                alt="Instagram"
-            />
-        </a>
+        <div class="about-me-title">About Me</div>
+        <p class="about-me-text">
+            Hello Everyone My Name Is Murali, I'm A Student, I'm Not A Pro Coder. I Just Do this Only For My Timepass And I Have A Channel Named @MuraliBotz On Telegram. I will upload my all bots And Codes There You Can Join. I Live In India From Karnataka State 🇮🇳, And My Age Is 16. If You Have Any Questions Dm Me On Telegram ~Thank You
+        </p>
+        <div class="github-stats-container">
+            <p class="github-stats-text">My GitHub Stats</p>
+            <a href="https://github.com/MURALIBOTZ" target="_blank">
+                <img class="github-stats" src="https://github-readme-stats.vercel.app/api?username=MuraliBotz&count_private=true&show_icons=true&theme=chartreuse-dark&custom_title=MuraliBotz+Github+Stats&include_all_commits=true&hide_border=true&bg_color=000000" alt="GitHub Stats" />
+            </a>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a>
+            <a href="https://t.me/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
+            <a href="mailto:muralimurali3211260@gmail.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
+            <a href="https://www.instagram.com/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
+        </div>
     </div>
 
     <script>
@@ -85,15 +56,11 @@
             "linear-gradient(135deg, #404040, #1b1b1b)",
         ];
 
-        document.body.style.background =
-            backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
         for (let i = 0; i < numShapes; i++) {
             const shape = document.createElement("div");
-            shape.classList.add(
-                "shape",
-                shapes[Math.floor(Math.random() * shapes.length)]
-            );
+            shape.classList.add("shape", shapes[Math.floor(Math.random() * shapes.length)]);
             shape.classList.add("float");
             const size = Math.random() * 50 + 10;
             shape.style.width = `${size}px`;
@@ -112,15 +79,17 @@
             "Img/Murali4.png",
             "Img/Murali5.png",
         ];
-        const randomImageUrl =
-            imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         document.getElementById("random-image").src = randomImageUrl;
 
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.getElementById('loading-screen').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            }, 2000);
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, 500);
+            }, 3000);
         });
     </script>
 </body>
