@@ -4,235 +4,230 @@
 
 /* Everything Fixed By @MuraliBotz */
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: "Poppins", sans-serif;
-    color: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background: black;
-    padding-top: 20px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  padding-top: 20px;
 }
 
 #loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
 }
 
 #content {
-    display: none;
-    z-index: 2;
-    text-align: center;
+  display: none;
+  z-index: 2;
+  text-align: center;
 }
 
-
-
-
-
 .shape {
-    position: absolute;
-    z-index: 1;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background-color: transparent;
-    animation: move 15s infinite;
+  position: absolute;
+  z-index: 1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  animation: move 15s infinite;
 }
 
 .shape.circle {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .shape.square {
-    border-radius: 0;
-    width: 15px;
-    height: 15px;
+  border-radius: 0;
+  width: 15px;
+  height: 15px;
 }
 
 @keyframes move {
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(200vw, 0);
-    }
-    50% {
-        transform: translate(200vw, 200vh);
-    }
-    75% {
-        transform: translate(0, 200vh);
-    }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(200vw, 0);
+  }
+  50% {
+    transform: translate(200vw, 200vh);
+  }
+  75% {
+    transform: translate(0, 200vh);
+  }
 }
 
 .float {
-    animation: float 5s infinite;
+  animation: float 5s infinite;
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .info {
-    text-shadow: 0 0 2px white;
-    font-size: 1.9em;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+  text-shadow: 0 0 2px white;
+  font-size: 1.9em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .underlined-text {
-    text-decoration: underline;
-    text-decoration-color: orange;
-    text-shadow: 0 0 40px blue;
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-shadow: 0 0 40px blue;
 }
 
 .about-me-title {
-    font-size: 2em;
-    text-decoration: underline;
-    text-decoration-color: green;
-    text-shadow: 0 0 10px yellow;
-    animation: glow 1s infinite alternate;
-    font-family: "Lobster", cursive;
-    text-align: left;
-    margin-top: 40px;
-    margin-left: 40px;
-    width: 100%;
+  font-size: 2em;
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-shadow: 0 0 10px yellow;
+  animation: glow 1s infinite alternate;
+  font-family: "Lobster", cursive;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 40px;
+  width: 100%;
 }
 
 .about-me-text {
-    font-size: 1.5em;
-    font-family: "Poppins", sans-serif;
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 40px;
-    width: 100%;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 100%;
 }
 
 .github-stats-container {
-    margin-top: 20px;
-    width: 80%;
-    margin-left: 60px;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 40px;
 }
 
 .github-stats {
-    width: 100%;
-    opacity: 0.8;
-    border-radius: 10px;
-    animation: githubGlowBlue 3s infinite alternate;
+  width: 100%;
+  opacity: 0.8;
+  border-radius: 10px;
+  animation: githubGlowBlue 3s infinite alternate;
 }
 
-
 .github-stats:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px blue;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px blue;
 }
 
 .github-stats-text {
-    font-size: 1.5em;
-    text-decoration: underline;
-    text-decoration-color: orange;
-    text-shadow: 0 0 10px green;
-    animation: githubGlow 1s infinite alternate;
-    font-family: "Lobster", cursive;
-    text-align: left;
-    margin-top: 40px;
-    margin-left: 60px;
-    width: 100%;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-shadow: 0 0 10px green;
+  animation: githubGlow 1s infinite alternate;
+  font-family: "Lobster", cursive;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 100%;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .social-icons a {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 0 5px white);
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 5px white);
 }
 
 .social-icons img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white),
-        drop-shadow(0 0 15px white);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px white), drop-shadow(0 0 10px white),
+    drop-shadow(0 0 15px white);
 }
 
 .footer {
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    margin-top: auto;
-    font-size: 1em;
-    color: white;
-    text-shadow: 0 0 5px white;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin-top: auto;
+  font-size: 1em;
+  color: white;
+  text-shadow: 0 0 5px white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 @keyframes glow {
-    from {
-        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
-    }
-    to {
-        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
-    }
+  from {
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+  }
+  to {
+    text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+  }
 }
 
 @keyframes githubGlow {
-    from {
-        text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
-    }
-    to {
-        text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
-    }
+  from {
+    text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange;
+  }
+  to {
+    text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+  }
 }
 
 @media (min-width: 768px) {
-    #content {
-        padding: 40px;
-    }
+  #content {
+    padding: 40px;
+  }
 }
 
 #random-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px pink;
-    margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px pink;
+  margin-bottom: 20px;
 }
 
 /* Loading Screen Styles */
@@ -277,7 +272,7 @@ body {
 }
 
 #ring:nth-child(2) {
-  border-bottom: 8px solid rgb(255,65,106);
+  border-bottom: 8px solid rgb(255, 65, 106);
   animation: rotate2 2s linear infinite;
 }
 
@@ -292,7 +287,7 @@ body {
 }
 
 #ring:nth-child(3) {
-  border-bottom: 8px solid rgb(0,255,255);
+  border-bottom: 8px solid rgb(0, 255, 255);
   animation: rotate3 2s linear infinite;
 }
 
