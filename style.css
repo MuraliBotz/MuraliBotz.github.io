@@ -131,7 +131,7 @@ body {
 .github-stats-container {
     margin-top: 20px;
     width: 80%;
-    margin-left: 0px;
+    margin-left: 50px;
 }
 
 .github-stats {
@@ -156,7 +156,7 @@ body {
     font-family: "Lobster", cursive;
     text-align: left;
     margin-top: 40px;
-    margin-left: -40px;
+    margin-left: 40px;
     width: 100%;
 }
 
