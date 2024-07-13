@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentCharacterIndex--;
         if (currentCharacterIndex === 0) {
           isDeleting = false;
-          currentWordIndex = (currentWordIndex + 1) % words.length;
+          currentWordIndex = (currentWordIndex + 3) % words.length;
         }
       } else {
         profileText.textContent = currentWord.substring(0, currentCharacterIndex + 1);
