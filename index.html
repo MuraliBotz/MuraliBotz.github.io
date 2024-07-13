@@ -1,106 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Murali Website</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Poxrtfolio</title>
 </head>
 <body>
-    <div id="loading-screen">
-        <div id="page">
-            <div id="container">
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="ring"></div>
-                <div id="h3">loading</div>
-            </div>
-        </div>
+  <div id="loading-screen" class="loading-screen">
+    <div class="container">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div> 
     </div>
+  </div>
 
-    <div id="content" style="display: none;">
-        <img id="random-image" src="" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 0 20px pink; margin-bottom: 20px;" />
-        <div class="info">
-            <div class="underlined-text">𝑴𝑼𝑹𝑨𝑳𝑰</div>
+  <div id="main-content" class="hidden">
+    <label class="switch">
+      <input type="checkbox" class="input__check" id="checkbox_toggle">
+      <span class="slider"></span>
+    </label>
+    <div class="profile-box">
+      <div class="circle">
+        <div class="border-one"></div>
+        <div class="border-two"></div>
+        <div class="content">
+          <img id="random-image" src="">
         </div>
-        <div class="about-me-title">About Me</div>
-        <p class="about-me-text">
-            💜|| 𝐇𝐞𝐥𝐥𝐨 𝐄𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐌𝐲 𝐍𝐚𝐦𝐞 𝐈𝐬 𝐌𝐮𝐫𝐚𝐥𝐢, 𝐈'𝐦 𝐀 𝐒𝐭𝐮𝐝𝐞𝐧𝐭, 𝐈'𝐦 𝐍𝐨𝐭 𝐀 𝐏𝐫𝐨 
-            𝐂𝐨𝐝𝐞𝐫 𝐈 𝐉𝐮𝐬𝐭 𝐃𝐨 𝐭𝐡𝐢𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐌𝐲 𝐓𝐢𝐦𝐞𝐩𝐚𝐬𝐬 𝐀𝐧𝐝 𝐈 𝐇𝐚𝐯𝐞 𝐀 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐍𝐚𝐦𝐞𝐝 @𝐌𝐮𝐫𝐚𝐥𝐢𝐁𝐨𝐭𝐳 𝐎𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦. 𝐈 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝 𝐦𝐲 𝐚𝐥𝐥 𝐛𝐨𝐭𝐬 
-            𝐀𝐧𝐝 𝐂𝐨𝐝𝐞𝐬 𝐓𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐂𝐚𝐧 𝐉𝐨𝐢𝐧. 𝐈 𝐋𝐢𝐯𝐞 𝐈𝐧 𝐈𝐧𝐝𝐢𝐚 𝐅𝐫𝐨𝐦 𝐊𝐚𝐫𝐧𝐚𝐭𝐚𝐤𝐚 𝐒𝐭𝐚𝐭𝐞 🇮🇳, 𝐀𝐧𝐝 
-            𝐌𝐲 𝐀𝐠𝐞 𝐈𝐬 𝟏𝟔. 𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐃𝐦 𝐌𝐞 𝐎𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 ~𝐓𝐡𝐚𝐧𝐤 𝐘𝐨𝐮 ||💜
-        </p>
-        <div class="github-stats-container">
-            <p class="github-stats-text">My GitHub Stats</p>
-            <a href="https://github.com/MURALIBOTZ" target="_blank">
-                <img class="github-stats" src="https://github-readme-stats.vercel.app/api?username=MuraliBotz&show_icons=true&theme=vision-friendly-dark" alt="GitHub Stats" />
-            </a>
-        </div>
-        <div class="github-stats-container">
-            <p class="github-stats-text"></p>
-            <a href="https://github.com/MURALIBOTZ" target="_blank">
-                <img class="github-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=MURALIBOTZ&theme=chartreuse-dark&hide_border=True&bg_color=000000" alt="GitHub Stats" />
-            </a>
-        </div>
-        <div class="social-icons">
+      </div>
+      <div class="profile-text-container">
+        <div class="profile-text" id="profile-text"></div>
+      </div>
+    </div>
+    <div class="about-me-title">About Me</div>
+    <div class="about-me-content">
+      𝐇𝐞𝐥𝐥𝐨 𝐄𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐌𝐲 𝐍𝐚𝐦𝐞 𝐈𝐬 𝐌𝐮𝐫𝐚𝐥𝐢, 𝐈'𝐦 𝐀 𝐒𝐭𝐮𝐝𝐞𝐧𝐭, 𝐈'𝐦 𝐍𝐨𝐭 𝐀 <br>
+      𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫 𝐈 𝐉𝐮𝐬𝐭 𝐃𝐨 𝐭𝐡𝐢𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐌𝐲 𝐓𝐢𝐦𝐞𝐩𝐚𝐬𝐬 𝐀𝐧𝐝 𝐈 𝐇𝐚𝐯𝐞<br>
+      𝐀 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐍𝐚𝐦𝐞𝐝 @𝐌𝐮𝐫𝐚𝐥𝐢𝐁𝐨𝐭𝐳 𝐎𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦. 𝐈 𝐰𝐢𝐥𝐥 𝐮𝐩𝐥𝐨𝐚𝐝<br>
+      𝐌𝐲 𝐀𝐥𝐥 𝐁𝐨𝐭𝐬 𝐀𝐧𝐝 𝐂𝐨𝐝𝐞𝐬 𝐓𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐂𝐚𝐧 𝐉𝐨𝐢𝐧. 𝐈 𝐋𝐢𝐯𝐞<br>
+      𝐈𝐧 𝐈𝐧𝐝𝐢𝐚 𝐅𝐫𝐨𝐦 𝐊𝐚𝐫𝐧𝐚𝐭𝐚𝐤𝐚 𝐒𝐭𝐚𝐭𝐞 🇮🇳, 𝐀𝐧 𝐌𝐲 𝐀𝐠𝐞 𝐈𝐬 𝟏𝟔.<br>
+      𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐃𝐦 𝐌𝐞 𝐎𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 ~𝐓𝐡𝐚𝐧𝐤 𝐘𝐨𝐮
+    </div>
+    <div class="github-stats-text">My Github Stats</div>
+
+<a href="https://github.com/MURALIBOTZ" target="_blank">
+      <img class="github-stats" src="https://github-readme-stats.vercel.app/api?username=MuraliBotz&show_icons=true&theme=vision-friendly-dark" alt="GitHub Stats" />
+    </a>
+    <a href="https://github.com/MURALIBOTZ" target="_blank">
+      <img class="Zgithub-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=MURALIBOTZ&theme=chartreuse-dark&hide_border=True&bg_color=000000" alt="GitHub Stats" />
+    </a>
+    <div class="contact-me-text">Contact Me</div>
+    <a class="Cbutton" href="https://t.me/ItzNotCoder" style="--color: #FF1493;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Click Here
+    </a>
+    <div class="social-icons">
             <a href="https://github.com/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a>
             <a href="https://t.me/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
             <a href="mailto:muralimurali3211260@gmail.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" /></a>
             <a href="https://www.instagram.com/MuraliBotz" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
         </div>
+    <div class="footer">
+      <div class="footer-left">
+        © 2024 Murali. All rights reserved.
+      </div>
     </div>
-
-    <script>
-        const shapes = ["circle", "square"];
-        const numShapes = 30;
-
-        const backgrounds = [
-            "linear-gradient(135deg, #1e3c72, #2a5298)",
-            "linear-gradient(135deg, #9d50bb, #6e48aa)",
-            "linear-gradient(135deg, #2b5876, #4e4376)",
-            "linear-gradient(135deg, #1e3c72, #2a5298)",
-            "linear-gradient(135deg, #8e0e00, #1f1c18)",
-            "linear-gradient(135deg, #2b5876, #4e4376)",
-            "linear-gradient(135deg, #404040, #1b1b1b)",
-        ];
-
-        document.body.style.background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-
-        for (let i = 0; i < numShapes; i++) {
-            const shape = document.createElement("div");
-            shape.classList.add("shape", shapes[Math.floor(Math.random() * shapes.length)]);
-            shape.classList.add("float");
-            const size = Math.random() * 50 + 10;
-            shape.style.width = `${size}px`;
-            shape.style.height = `${size}px`;
-            shape.style.top = `${Math.random() * 100}vh`;
-            shape.style.left = `${Math.random() * 100}vw`;
-            shape.style.animationDuration = `${Math.random() * 5 + 5}s`;
-            shape.style.animationDelay = `${Math.random() * 3}s`;
-            document.body.appendChild(shape);
-        }
-
-        const imageUrls = [
-            "Img/Murali1.png",
-            "Img/Murali2.png",
-            "Img/Murali3.jpg",
-            "Img/Murali4.png",
-            "Img/Murali5.png",
-        ];
-        const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-        document.getElementById("random-image").src = randomImageUrl;
-
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loading-screen').style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById('loading-screen').style.display = 'none';
-                    document.getElementById('content').style.display = 'block';
-                }, 500); // for smooth transition 
-            }, 700);
-        });
-    </script>
+  </div>
+<div class="stars"></div>
+  
 </body>
+<script src="runner.js"></script>
 </html>
-
