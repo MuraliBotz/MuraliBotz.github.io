@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageUrls = [
             "Img/Murali1.png",
             "Img/Murali2.png",
+            "Img/Murali3.jpg",
+            "Img/Murali4.png",
             "Img/Murali5.png",
         ];
         const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
