@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("random-image").src = randomImageUrl;
   
     const profileText = document.getElementById('profile-text');
-    const words = ['𓆩𝑴𝑼𝑹𝜦𝑳𝛪𓆪', '𝐈𝐦 𝐍𝐨𝐭 𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫', '@itzNotCoder'];
+    const words = ['', '𝐈𝐦 𝐍𝐨𝐭 𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫', '@itzNotCoder'];
     let currentWordIndex = 0;
     let currentCharacterIndex = 0;
     let isDeleting = false;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentCharacterIndex--;
         if (currentCharacterIndex === 0) {
           isDeleting = false;
-          currentWordIndex = (currentWordIndex + 3) % words.length;
+          currentWordIndex = (currentWordIndex + 1) % words.length;
         }
       } else {
         profileText.textContent = currentWord.substring(0, currentCharacterIndex + 1);
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
           isDeleting = true;
         }
       }
-      setTimeout(type, isDeleting ? 100 : 200);
+      setTimeout(type, isDeleting ? 20 : 30);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
