@@ -462,7 +462,7 @@
     }
   
     .about-me-title {
-      font-size: 2.6em;
+      font-size: 2.2em;
       text-decoration: underline;
       text-decoration-color: green;
       text-shadow: 
@@ -499,7 +499,7 @@
   }
 }
     .about-me-content {
-      font-size: 1.52em;
+      font-size: 1.30em;
       color: white;
       margin-left: 45px;
       margin-top: 20px;
@@ -508,7 +508,7 @@
       }
   
     .github-stats-text {
-  font-size: 2.2em;
+  font-size: 1.7em;
   text-decoration: underline;
   text-decoration-color: red;
   text-shadow: 
