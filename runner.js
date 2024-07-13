@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("random-image").src = randomImageUrl;
   
     const profileText = document.getElementById('profile-text');
-    const words = ['', '𝐈𝐦 𝐍𝐨𝐭 𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫', '@itzNotCoder'];
+    const words = ['𓆩𝑴𝑼𝑹𝜦𝑳𝛪𓆪', '𝐈𝐦 𝐍𝐨𝐭 𝐏𝐫𝐨 𝐂𝐨𝐝𝐞𝐫', '@itzNotCoder'];
     let currentWordIndex = 0;
     let currentCharacterIndex = 0;
     let isDeleting = false;
