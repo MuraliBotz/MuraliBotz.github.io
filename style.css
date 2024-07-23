@@ -10,10 +10,8 @@
       font-family: Arial, sans-serif;
       transition: background 0.4s;
       background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-      background-attachment: fixed;
-      position: relative;
-      height: 100vh;
-    }
+      
+      }
    
    .star {
       position: fixed;
