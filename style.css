@@ -192,7 +192,7 @@
       perspective: 500px;
       animation: toggle__animation 3s infinite;
       left: 20px;
-      top: 30px;
+      top: 50px;
     }
     .social-icons {
   display: flex;
