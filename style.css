@@ -66,7 +66,7 @@ body {
 }
 
 .welcome-text {
-    font-size: 24px;
+    font-size: 26px;
     color: whitesmoke;
     animation: slideRight 2s ease forwards;
     position: relative;
@@ -88,7 +88,7 @@ body {
 }
 
 .MyName {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 2s ease forwards;
@@ -123,7 +123,7 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
-  font-size: 2.3em;
+  font-size: 2.1em;
   margin-top: 33px;
   text-decoration: underline;
   text-decoration-color: cyan;
@@ -149,7 +149,7 @@ body {
 }
 
 .about-me-content {
-  font-size: 22px;
+  font-size: 21px;
     color: whitesmoke;
     margin-top: 20px;
     animation: slideTop 2s ease forwards;
@@ -177,7 +177,7 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
-  font-size: 2.3em;
+  font-size: 2.1em;
   margin-top: 33px;
   text-decoration: underline;
   text-decoration-color: gold;
@@ -363,7 +363,7 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
-  font-size: 2.3em;
+  font-size: 2.1em;
   text-align: center;
   margin-top: 20px;
   text-decoration: underline;
@@ -388,7 +388,7 @@ body {
   opacity: 1;
   border-radius: 10px;
   margin-left: 30px;
-  margin-top: 20px;
+  
   animation: Scale 2s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
@@ -414,9 +414,8 @@ body {
 
 .visitors {
   width: 40%;
-  height: 8%;
-  opacity: 1;
-  border-radius: 10px;
+  height: 4%;
+  
   margin-left: 170px;
   margin-top: 20px;
   animation: Scale 2s ease forwards; 
@@ -430,7 +429,7 @@ body {
   opacity: 1;
   border-radius: 10px;
   margin-left: 110px;
-  margin-top: 20px;
+  
   animation: Scale 2s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
@@ -446,7 +445,7 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
-  font-size: 2.2em;
+  font-size: 2.1em;
   text-align: center;
   margin-top: 20px;
   text-decoration: underline;
