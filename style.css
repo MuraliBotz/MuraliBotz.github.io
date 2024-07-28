@@ -388,7 +388,7 @@ body {
   opacity: 1;
   border-radius: 10px;
   margin-left: 30px;
-  
+  margin-top: -5px;
   animation: Scale 2s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
@@ -414,10 +414,10 @@ body {
 
 .visitors {
   width: 40%;
-  height: 4%;
+  height: 2%;
   
   margin-left: 170px;
-  margin-top: 20px;
+  
   animation: Scale 2s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
@@ -429,7 +429,7 @@ body {
   opacity: 1;
   border-radius: 10px;
   margin-left: 110px;
-  
+  margin-top: -5px;
   animation: Scale 2s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
@@ -513,7 +513,7 @@ body {
 .hero-description {
   position: absolute;
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   left: 150px;
   bottom: 26%;
 }
@@ -579,7 +579,7 @@ body {
   left: 30px;
   bottom: 21%;
   left: 3%;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
