@@ -66,7 +66,7 @@ body {
 }
 
 .welcome-text {
-    font-size: 26px;
+    font-size: 24px;
     color: whitesmoke;
     animation: slideRight 2s ease forwards;
     position: relative;
@@ -88,7 +88,7 @@ body {
 }
 
 .MyName {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 2s ease forwards;
@@ -149,7 +149,7 @@ body {
 }
 
 .about-me-content {
-  font-size: 25px;
+  font-size: 22px;
     color: whitesmoke;
     margin-top: 20px;
     animation: slideTop 2s ease forwards;
@@ -514,7 +514,7 @@ body {
 .hero-description {
   position: absolute;
   color: #fff;
-  font-weight: 900;
+  font-size: 16px;
   left: 150px;
   bottom: 26%;
 }
@@ -580,6 +580,7 @@ body {
   left: 30px;
   bottom: 21%;
   left: 3%;
+  font-size: 16px;
 }
 
 
