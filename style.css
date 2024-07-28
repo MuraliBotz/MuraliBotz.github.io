@@ -404,7 +404,7 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   margin-top: 20px;
   text-decoration: underline;
@@ -413,8 +413,8 @@ body {
 
 
 .visitors {
-  width: 40%;
-  height: 2%;
+  width: 44%;
+  height: 4%;
   
   margin-left: 170px;
   
