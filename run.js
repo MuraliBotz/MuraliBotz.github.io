@@ -129,10 +129,10 @@ updateGreeting();
 
 
 const imageUrls = [
-            "Murali1.png",
-            "Murali2.png",
-            "Murali3.png",
-            "Murali4.png",
+            "Img/Murali1.png",
+            "Img/Murali2.png",
+            "Img/Murali3.png",
+            "Img/Murali4.png",
             
         ];
         const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
