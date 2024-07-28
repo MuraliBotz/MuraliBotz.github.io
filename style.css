@@ -141,7 +141,7 @@ body {
 }
 
 #greeting-text {
-    font-size: 1.5em;
+    font-size: 17px;
     color: whitesmoke;
     margin-top: 20px;
     animation: slideLeft 2s ease forwards;
@@ -149,7 +149,7 @@ body {
 }
 
 .about-me-content {
-  font-size: 21px;
+  font-size: 17px;
     color: whitesmoke;
     margin-top: 20px;
     animation: slideTop 2s ease forwards;
