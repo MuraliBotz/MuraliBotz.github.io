@@ -129,7 +129,12 @@ updateGreeting();
 
 
 const imageUrls = [
-            "Img/Murali1.png",
+            //"Img/Murali1.png",
+            "Img/Neonboy1.png",
+            "Img/Neonboy2.png",
+            "Img/Neinboy3.png",
+            "Img/Neonboy4.png",
+            "Img/Neonboy5.png",
             "Img/Murali2.png",
             "Img/Murali3.png",
             "Img/Murali4.png",
