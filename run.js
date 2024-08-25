@@ -93,7 +93,7 @@ var typed = new Typed('#element', {
 });
 
 var typed = new Typed('#elementTwo', {
-    strings: ['Im A Simple Python Bot Developer'],
+    strings: ['Im Not A Coder'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
