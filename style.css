@@ -129,7 +129,7 @@ body {
     color: whitesmoke;
     animation: slideRight 2s ease forwards;
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 55px;
   text-decoration: underline;
   text-decoration-color: greenyellow;
@@ -152,7 +152,7 @@ body {
     opacity: 0;
     animation: slideBottom 2s ease forwards;
     animation-delay: 0.7s;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 20px;
     color: cyan;
 }
@@ -523,7 +523,7 @@ body {
   overflow:hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
   margin: 30px;
-  margin-left: 80px;
+  margin-left: 60px;
   backdrop-filter: blur(3000px);
     animation: Scale 2.7s ease forwards; 
     scale: 0; 
@@ -664,7 +664,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .social-media a {
