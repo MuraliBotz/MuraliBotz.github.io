@@ -37,11 +37,10 @@ body {
     width: 300px;
     height: 300px;
     overflow: hidden;
-  display: flex;
     justify-content: center;
     align-items: center;
- /*   margin-left: 140px;
-    margin-top: 20px;*/
+    margin-left: 140px;
+    margin-top: 20px;
     filter: drop-shadow(0 0 2rem cyan); 
     animation: Scale 1s ease forwards, multiGlow 70s infinite; 
     scale: 0; 
