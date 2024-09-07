@@ -40,7 +40,7 @@ body {
     left: -10%;
     width: 30%;
     height: 100%;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.8); /* Background to show the sidebar */
     color: white;
     transition: left 0.3s ease; 
     z-index: 1000; 
@@ -52,20 +52,20 @@ body {
 #sidebar a {
     display: block;
     padding: 20px;
-    font-size: 2em;
+    font-size: 1.2em;
     color: white;
     text-decoration: none;
-   border-bottom: 1px solid cyan;
+    border-bottom: 1px solid cyan;
 }
 
 #sidebar a:hover {
-   background: #03e9f4;
+    background: #03e9f4;
     color: #050801;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 
@@ -90,7 +90,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); /* Slightly darken the background */
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -100,7 +100,6 @@ body {
 #overlay.active {
     visibility: visible;
     opacity: 1;
-    background: rgba(0, 0, 0, 0);
 }
 
 .circle {
