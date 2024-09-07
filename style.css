@@ -37,21 +37,19 @@ body {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -100%; /* Initially off-screen */
+    left: -300px; /* Fully hidden initially */
     width: 300px;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Transparent background */
     color: white;
-    transition: left 0.3s ease; 
+    transition: left 0.3s ease;
     z-index: 1000;
     padding: 80px 20px 20px;
     backdrop-filter: blur(30px);
-    display: none; /* Sidebar hidden initially */
 }
 
 #sidebar.active {
-    display: block; /* Show sidebar when active */
-    left: 0; /* Move it into view */
+    left: 0; /* Moves it fully into view */
 }
 
 #sidebar a {
@@ -78,7 +76,7 @@ body {
     top: 20px;
     left: 20px;
     font-size: 2em;
-    color: white; /* Menu icon color white */
+    color: white; /* Menu icon is white */
     z-index: 1001;
     cursor: pointer;
 }
