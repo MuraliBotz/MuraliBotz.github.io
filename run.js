@@ -147,15 +147,9 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar');
     var overlay = document.getElementById('overlay');
 
-    if (sidebar.classList.contains('active')) {
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-    } else {
-        sidebar.classList.add('active');
-        overlay.classList.add('active');
-    }
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
 });
-
 
 document.getElementById('overlay').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar');
@@ -164,5 +158,3 @@ document.getElementById('overlay').addEventListener('click', function() {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
 });
-
-
