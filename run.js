@@ -143,18 +143,24 @@ const imageUrls = [
         const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         document.getElementById("random-image").src = randomImageUrl;
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-    var sidebar = document.getElementById('sidebar');
-    var overlay = document.getElementById('overlay');
+var menuIcon = document.getElementById('menu-icon');
+var sidebar = document.getElementById('sidebar');
+var overlay = document.getElementById('overlay');
 
-    sidebar.classList.add('active');
-    overlay.classList.add('active');
+menuIcon.addEventListener('click', function() {
+    // Toggle sidebar visibility
+    if (sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    } else {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+    }
 });
 
-document.getElementById('overlay').addEventListener('click', function() {
-    var sidebar = document.getElementById('sidebar');
-    var overlay = document.getElementById('overlay');
-
+overlay.addEventListener('click', function() {
+    // Hide sidebar and overlay when clicking outside
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
 });
+
