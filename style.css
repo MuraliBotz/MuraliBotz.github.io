@@ -10,6 +10,8 @@ body {
   background-color: #000000;
   min-height: 100vh;
   overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 #gradient {
