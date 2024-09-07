@@ -527,7 +527,7 @@ body {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
   margin: 30px;
   margin-left: 60px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(5px);
     animation: Scale 2.7s ease forwards; 
     scale: 0; 
     animation-delay: 2s; 
