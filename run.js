@@ -83,6 +83,27 @@ function updateGradientBackground() {
 
 setInterval(updateGradientBackground, 10); // It Means 10 milliseconds 
 
+document.getElementById('menu-icon').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('overlay');
+
+    if (sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    } else {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+    }
+});
+
+
+document.getElementById('overlay').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('overlay');
+
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+});
 
 var typed = new Typed('#element', {
     strings: ['Murali'],
