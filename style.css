@@ -37,17 +37,22 @@ body {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -10%;
-    width: 30%;
+    left: -100%; /* Initially off-screen */
+    width: 300px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Background to show the sidebar */
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
     color: white;
     transition: left 0.3s ease; 
-    z-index: 1000; 
-    padding: 80px 20px 20px; 
+    z-index: 1000;
+    padding: 80px 20px 20px;
     backdrop-filter: blur(30px);
+    display: none; /* Sidebar hidden initially */
 }
 
+#sidebar.active {
+    display: block; /* Show sidebar when active */
+    left: 0; /* Move it into view */
+}
 
 #sidebar a {
     display: block;
@@ -68,21 +73,15 @@ body {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-
 #menu-icon {
     position: fixed;
     top: 20px;
     left: 20px;
     font-size: 2em;
-    z-index: 1001; 
+    color: white; /* Menu icon color white */
+    z-index: 1001;
     cursor: pointer;
 }
-
-
-#sidebar.active {
-    left: 0;
-}
-
 
 #overlay {
     position: fixed;
@@ -90,7 +89,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly darken the background */
+    background: rgba(0, 0, 0, 0.5); /* Slightly dark background when active */
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -101,6 +100,7 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
 
 .circle {
     width: 300px;
