@@ -163,4 +163,3 @@ overlay.addEventListener('click', function() {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
 });
-
