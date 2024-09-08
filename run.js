@@ -148,7 +148,7 @@ var sidebar = document.getElementById('sidebar');
 var overlay = document.getElementById('overlay');
 
 menuIcon.addEventListener('click', function() {
-    // Toggle sidebar visibility
+    
     if (sidebar.classList.contains('active')) {
         sidebar.classList.remove('active');
         overlay.classList.remove('active');
@@ -159,7 +159,7 @@ menuIcon.addEventListener('click', function() {
 });
 
 overlay.addEventListener('click', function() {
-    // Hide sidebar and overlay when clicking outside
+    
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
 });
