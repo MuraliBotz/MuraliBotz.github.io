@@ -37,10 +37,10 @@ body {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -300px; /* Fully hidden initially */
+    left: -300px; 
     width: 300px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    background: transparent;
     color: white;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -49,7 +49,7 @@ body {
 }
 
 #sidebar.active {
-    left: 0; /* Moves it fully into view */
+    left: 0;
 }
 
 #sidebar a {
@@ -64,10 +64,10 @@ body {
 #sidebar a:hover {
     background: #03e9f4;
     color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
+    box-shadow: 0 0 5px #FF5C00,
+                0 0 25px #FF5C00,
+                0 0 50px #FF5C00,
+                0 0 200px #FF5C00;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
@@ -76,7 +76,7 @@ body {
     top: 20px;
     left: 20px;
     font-size: 2em;
-    color: white; /* Menu icon is white */
+    color: white;
     z-index: 1001;
     cursor: pointer;
 }
@@ -87,7 +87,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly dark background when active */
+    background: transparent;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
