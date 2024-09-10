@@ -47,16 +47,16 @@
   <meta content="Murali Portfolio | This Is My First Web Development Project." property="og:description">
 </head>
 <body>
-  
-<div class="cube-wrapper">
-  <div class="cube-folding">
-    <span class="leaf1"></span>
-    <span class="leaf2"></span>
-    <span class="leaf3"></span>
-    <span class="leaf4"></span>
+		<motion-particles></motion-particles>
+	<div class="loading-screen">
+    
+    <div class="rotating-circle"></div>
+    <div class="rotating-circle"></div>
+    <div class="rotating-circle"></div>
+
+    
+    <div class="glitch" data-glitch="Loading...">Loading...</div>
   </div>
-  <span class="loading" data-name="Loading">Loading</span>
-</div>
 <div id="portfolio-content" style="display: none;">
     <div id="gradient"></div>
     <div class="firefly"></div>
@@ -446,7 +446,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         
-        document.querySelector('.cube-wrapper').style.display = 'none';
+        document.querySelector('.loading-screen').style.display = 'none';
         
         
         document.getElementById('portfolio-content').style.display = 'block';
