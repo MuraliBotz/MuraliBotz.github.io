@@ -8,7 +8,8 @@
 body {
   font-family: serif;
   display: flex;
-  background: #262626;
+  background-color: #7a7adb;
+  background-image: linear-gradient(315deg, #7a7adb 0%, #170e13 74%);
   min-height: 100vh;
   overflow-x: hidden;
   place-items: center;
@@ -39,21 +40,21 @@ body {
         top: 10px;
         left: 20px;
         border-left: 5px solid orange;
-        filter: drop-shadow(0px 0px 10px orange);
+        filter: drop-shadow(0px 0px 30px orange);
     }
 
     .loading-screen .rotating-circle:nth-child(2) {
         top: 10px;
         right: 20px;
         border-top: 5px solid white;
-        filter: drop-shadow(0px 0px 10px white);
+        filter: drop-shadow(0px 0px 30px white);
     }
 
     .loading-screen .rotating-circle:nth-child(3) {
         bottom: 45px;
         left: 50px;
         border-right: 5px solid green;
-        filter: drop-shadow(0px 0px 10px green);
+        filter: drop-shadow(0px 0px 30px green);
     }
 
     @keyframes spin-animation {
