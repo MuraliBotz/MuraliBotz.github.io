@@ -8,8 +8,8 @@
 body {
   font-family: serif;
   display: flex;
-  background-color: #7a7adb;
-  background-image: linear-gradient(315deg, #7a7adb 0%, #170e13 74%);
+  background-color: #181818;
+  
   min-height: 100vh;
   overflow-x: hidden;
   place-items: center;
