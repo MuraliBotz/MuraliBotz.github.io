@@ -40,21 +40,21 @@ body {
         top: 10px;
         left: 20px;
         border-left: 5px solid orange;
-        filter: drop-shadow(0px 0px 60px orange);
+        filter: drop-shadow(0 0 2rem orange);
     }
 
     .loading-screen .rotating-circle:nth-child(2) {
         top: 10px;
         right: 20px;
         border-top: 5px solid white;
-        filter: drop-shadow(0px 0px 60px white);
+        filter: drop-shadow(0 0 2rem white);
     }
 
     .loading-screen .rotating-circle:nth-child(3) {
         bottom: 45px;
         left: 50px;
         border-right: 5px solid green;
-        filter: drop-shadow(0px 0px 60px green);
+        filter: drop-shadow(0 0 2rem green);
     }
 
     @keyframes spin-animation {
