@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: serif;
+  display: flex;
+  background-color: #081b29;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  place-items: center;
+  
+}
+
+canvas {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            max-width: 100%; 
+            max-height: 100%; 
+            pointer-events: none;
+            z-index: -1;
+        }
+
+
+#gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 250px;
+    height: 100%;
+    background: transparent;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 80px 20px 20px;
+    backdrop-filter: blur(30px);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar a {
+    display: block;
+    padding: 15px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid cyan;
+}
+
+#sidebar a:hover {
+   background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+    color: white;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+#menu-icon i {
+    color: white;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+#overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.png-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: multiGlow 70s infinite;
+    animation-delay: 1s; 
+  filter: drop-shadow(0 0 2rem cyan); 
+}
+
+
+
+
+img {
+  max-width: 50%;
+}
+
+.glitch {
+    position: relative;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    top: 20px;
+    letter-spacing: 5px;
+    z-index: 1;
+    animation: shift 1s ease-in-out infinite alternate;
+    text-decoration: underline;
+    text-decoration-color: cyan;
+}
+
+.glitch:before,
+.glitch:after {
+    display: block;
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  
+}
+
+.glitch:before {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: black;
+    z-index: -1;
+  text-align: center;
+}
+
+.glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: cyan;
+    z-index: -2;
+  text-align: center;
+}
+
+
+
+.myname {
+    font-size: 25px;
+    font-weight: 200;
+    color: white; 
+    margin-left: 10px;
+    margin-top: 20px;
+    white-space: pre-wrap; 
+    text-align: left; 
+    font-family: serif;
+    position: absolute;
+    top: 330px; 
+    left: -15px; 
+}
+
+#typingText {
+    color: cyan; 
+}
+
+
+.about-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.9em;
+  margin-top: 123px;
+  
+  text-decoration: underline;
+  text-decoration-color: yellowgreen;
+  
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#greeting-text {
+    font-size: 17px;
+    color: whitesmoke;
+    margin-top: 20px;
+  margin-left: 30px;
+    animation: slideLeft 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.about-me-content {
+  font-size: 15px;
+    color: whitesmoke;
+    margin-top: 20px;
+  margin-left: 30px;
+    animation: slideTop 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+
+
+
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.skill-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    width: 180px; 
+}
+
+.skill-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.skill-text {
+    font-size: 16px;
+    font-weight: bold;
+  color: aliceblue;
+}
+
+.skill-bar {
+    width: 200%;
+    height: 17px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+  border-color: transparent;
+    overflow: hidden;
+    margin-left: 60px;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.python {
+    width: 75%; 
+    background-color: purple;
+  box-shadow: 0 0 150px 50px purple;
+}
+
+.html {
+    width: 50%; 
+    background-color: brown;
+  box-shadow: 0 0 150px 50px brown;
+}
+
+.css {
+    width: 78%; 
+    background-color: blue;
+  box-shadow: 0 0 150px 50px blue;
+}
+
+.javascript {
+    width: 40%; 
+    background-color: yellow;
+  box-shadow: 0 0 10px 50px yellow;
+}
+
+.typescript {
+    width: 10%; 
+    background-color: cyan;
+  box-shadow: 0 0 10px 11px cyan;
+}
+
+.java {
+  width: 1%; 
+    background-color: purple;
+  box-shadow: 0 0 150px 50px purple;
+}
+
+.mongodb {
+  width: 40%; 
+    background-color: forestgreen;
+  box-shadow: 0 0 150px 50px forestgreen;
+}
+
+.skill-text-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.9em;
+ 
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: yellowgreen;
+  margin-top: 20px;
+}
+
+.my-bots-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 3s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.9em;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: pink;
+}
+
+
+.github-stats-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 3s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.9em;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: purple;
+}
+
+.visitors-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 3s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: purple;
+}
+
+
+.visitors {
+  width: 44%;
+  height: 4%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  animation: Scale 2s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+  margin-left: 96px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+.github-stats {
+  
+  max-width: 150%;
+  height: 50%;
+  opacity: 1;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 40px;
+  animation: Scale 2s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Zgithub-stats {
+  max-width: 150%;
+  height: 50%;
+  opacity: 1;
+  border-radius: 10px;
+  margin-left: 20px;
+  animation: Scale 2s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+
+.most-lang {
+  max-width: 150%;
+  height: 50%;
+  opacity: 1;
+  border-radius: 10px;
+  margin-left: 40px;
+  animation: Scale 2s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+
+.contact-me-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 4s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1.6em;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: green;
+  
+}
+
+.contact-me-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideLeft 4s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: whitesmoke;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    font-size: 20px;
+    color: cyan;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 3s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background-color: cyan;
+    color: black;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.footer {
+  background-color: transparent;
+  color: white;              
+  text-align: center;         
+  padding: 20px 0;    
+  position: relative;
+  bottom: 0;
+  top: 40px;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content p {
+  margin: 5px 0;              
+}
+
+.footer-content p:first-child {
+  font-weight: 700;           
+}
+
+.footer-content p:last-child {
+  font-size: 0.9rem;    
+}

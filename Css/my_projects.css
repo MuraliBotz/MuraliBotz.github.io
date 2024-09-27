@@ -1,0 +1,621 @@
+.chiku {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.chiku-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-left: 50px;
+}
+
+.chiku-description-bg {
+  background: linear-gradient(0deg, #ff5f6d, #ffc371);
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ }
+
+
+
+.chiku-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: -8%;
+}
+
+.chiku-btn {
+  position: absolute;
+  color: #fff;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.chiku-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #FF5C00, 0 0 10px #FF5C00;
+    transition: box-shadow 1s ease;
+}
+
+.chiku-btn a:hover {
+    box-shadow: 0 0 5px #FF5C00, 0 0 25px #FF5C00, 0 0 50px #FF5C00, 0 0 100px #FF5C00, 0 0 200px #FF5C00;
+  background: #FF5C00;
+  color: black;
+  
+}
+
+.repo-btn {
+  position: absolute;
+  color: #fff;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.repo-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px #FF5C00, 0 0 10px #FF5C00;
+    transition: box-shadow 1s ease;
+}
+
+.repo-btn a:hover {
+    box-shadow: 0 0 5px #FF5C00, 0 0 25px #FF5C00, 0 0 50px #FF5C00, 0 0 100px #FF5C00, 0 0 200px #FF5C00;
+  background: #FF5C00;
+  color: black;
+}
+
+
+.Neko {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Neko-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-left: 50px;
+  margin-top: -20px;
+}
+
+.Neko-description-bg {
+  background: linear-gradient(0deg, #f953c6, #b91d73);
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ }
+
+
+
+.Neko-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: -8%;
+}
+
+.Neko-btn {
+  position: absolute;
+  color: #fff;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.Neko-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: #A8E6CF;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #DA70D6, 0 0 10px #DA70D6;
+    transition: box-shadow 1s ease;
+}
+
+.Neko-btn a:hover {
+    box-shadow: 0 0 5px #DA70D6, 0 0 25px #DA70D6, 0 0 50px #DA70D6, 0 0 100px #DA70D6, 0 0 200px #DA70D6;
+  background: #DA70D6;
+  color: black;
+  
+}
+
+.Nekos-btn {
+  position: absolute;
+  color: #fff;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.Nekos-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: #A8E6CF;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px orchid, 0 0 10px orchid;
+    transition: box-shadow 1s ease;
+}
+
+.Nekos-btn a:hover {
+    box-shadow: 0 0 5px #DA70D6, 0 0 25px #DA70D6, 0 0 50px #DA70D6, 0 0 100px #DA70D6, 0 0 200px #DA70D6;
+  background: #DA70D6;
+  color: black;
+}
+
+
+.Music {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Music-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  
+}
+
+.Music-description-bg {
+  background: linear-gradient(0deg, #654ea3, #eaafc8);
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ 
+}
+
+
+
+.Music-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: -8%;
+}
+
+.Music-btn {
+  position: absolute;
+  color: #fff;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.Music-btn a {
+    display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: #9FE2BF;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #9FE2BF, 0 0 10px #9FE2BF;
+    transition: box-shadow 1s ease;
+}
+
+.Music-btn a:hover {
+    box-shadow: 0 0 5px #9FE2BF, 0 0 25px #9FE2BF, 0 0 50px #9FE2BF, 0 0 100px #9FE2BF, 0 0 200px #9FE2BF;
+  background: #9FE2BF;
+  color: black;
+  
+}
+
+.Music2-btn {
+  position: absolute;
+  color: #fff;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.Music2-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: #9FE2BF;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px #9FE2BF, 0 0 10px #9FE2BF;
+    transition: box-shadow 1s ease;
+}
+
+.Music2-btn a:hover {
+    box-shadow: 0 0 5px #9FE2BF, 0 0 25px #9FE2BF, 0 0 50px #9FE2BF, 0 0 100px #9FE2BF, 0 0 200px #9FE2BF;
+  background: #9FE2BF;
+  color: black;
+}
+
+.Pokedex {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Pokedex-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  
+}
+
+.Pokedex-description-bg {
+  background: linear-gradient(90deg, #3a7bd5, #3a7bd5);
+
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ 
+}
+
+
+
+.Pokedex-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: -8%;
+}
+
+.Pokedex-btn {
+  position: absolute;
+  color: #D4A5A5;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.Pokedex-btn a {
+    display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #B3E5FC, 0 0 10px #B3E5FC;
+    transition: box-shadow 1s ease;
+}
+
+.Pokedex-btn a:hover {
+    box-shadow: 0 0 5px #B3E5FC, 0 0 25px #B3E5FC, 0 0 50px #B3E5FC, 0 0 100px #B3E5FC, 0 0 200px #B3E5FC;
+  background: #B3E5FC;
+  color: black;
+  
+}
+
+.Pokedex2-btn {
+  position: absolute;
+  color: green;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.Pokedex2-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px #B3E5FC, 0 0 10px #B3E5FC;
+    transition: box-shadow 1s ease;
+}
+
+.Pokedex2-btn a:hover {
+    box-shadow: 0 0 5px #B3E5FC, 0 0 25px #B3E5FC, 0 0 50px #B3E5FC, 0 0 100px #B3E5FC, 0 0 200px #B3E5FC;
+  background: #B3E5FC;
+  color: black;
+}
+
+.Insta {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Insta-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  
+}
+
+.Insta-description-bg {
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ 
+}
+
+
+
+.Insta-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: -8%;
+}
+
+.Insta-btn {
+  position: absolute;
+  color: #D4A5A5;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.Insta-btn a {
+    display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: fuchsia;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #B3E5FC, 0 0 10px #B3E5FC;
+    transition: box-shadow 1s ease;
+}
+
+.Insta-btn a:hover {
+    box-shadow: 0 0 5px #B3E5FC, 0 0 25px #B3E5FC, 0 0 50px #B3E5FC, 0 0 100px #B3E5FC, 0 0 200px #B3E5FC;
+  background: #B3E5FC;
+  color: black;
+  
+}
+
+.Insta2-btn {
+  position: absolute;
+  color: green;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.Insta2-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: fuchsia;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px #B3E5FC, 0 0 10px #B3E5FC;
+    transition: box-shadow 1s ease;
+}
+
+.Insta2-btn a:hover {
+    box-shadow: 0 0 5px #B3E5FC, 0 0 25px #B3E5FC, 0 0 50px #B3E5FC, 0 0 100px #B3E5FC, 0 0 200px #B3E5FC;
+  background: #B3E5FC;
+  color: black;
+}
+
+.Ai {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(5px);
+    animation: Scale 2.7s ease forwards; 
+    scale: 0; 
+    animation-delay: 2s; 
+}
+
+.Ai-profile-img {
+  max-width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-top: -30px;
+  margin-left: 50px;
+}
+
+.Ai-description-bg {
+  background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 100%;
+ 
+}
+
+
+
+.Ai-description {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  left: 10px;
+  top: 1%;
+}
+
+.Ai-btn {
+  position: absolute;
+  color: #D4A5A5;
+  left: 13px;
+  bottom: 6%;
+  
+}
+
+.Ai-btn a {
+    display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+    box-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF6B6B;
+    transition: box-shadow 1s ease;
+}
+
+.Ai-btn a:hover {
+    box-shadow: 0 0 5px #FF6B6B, 0 0 25px #FF6B6B, 0 0 50px #FF6B6B, 0 0 100px #FF6B6B, 0 0 200px #FF6B6B;
+  background: #FF6B6B;
+  color: black;
+  
+}
+
+.Ai2-btn {
+  position: absolute;
+  color: green;
+  right: 13px;
+  bottom: 6%;
+  
+}
+
+.Ai2-btn a {
+  display: inline-block;
+    padding: 6px 7px;
+    background: transparent;
+    border-radius: 16px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+  box-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF6B6B;
+    transition: box-shadow 1s ease;
+}
+
+.Ai2-btn a:hover {
+    box-shadow: 0 0 5px #FF6B6B, 0 0 25px #FF6B6B, 0 0 50px #FF6B6B, 0 0 100px #FF6B6B, 0 0 200px #FF6B6B;
+  background: #FF6B6B;
+  color: black;
+}
+

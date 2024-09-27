@@ -1,0 +1,131 @@
+@keyframes Scale {
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes multiGlow {
+    0% {
+        filter: drop-shadow(0 0 2rem cyan);
+    }
+    6.25% {
+        filter: drop-shadow(0 0 2rem magenta);
+    }
+    12.5% {
+        filter: drop-shadow(0 0 2rem yellow);
+    }
+    18.75% {
+        filter: drop-shadow(0 0 2rem lime);
+    }
+    25% {
+        filter: drop-shadow(0 0 2rem red);
+    }
+    31.25% {
+        filter: drop-shadow(0 0 2rem blue);
+    }
+    37.5% {
+        filter: drop-shadow(0 0 2rem orange);
+    }
+    43.75% {
+        filter: drop-shadow(0 0 2rem purple);
+    }
+    50% {
+        filter: drop-shadow(0 0 2rem pink);
+    }
+    56.25% {
+        filter: drop-shadow(0 0 2rem lightblue);
+    }
+    62.5% {
+        filter: drop-shadow(0 0 2rem lightgreen);
+    }
+    68.75% {
+        filter: drop-shadow(0 0 2rem gold);
+    }
+    75% {
+        filter: drop-shadow(0 0 2rem coral);
+    }
+    81.25% {
+        filter: drop-shadow(0 0 2rem turquoise);
+    }
+    87.5% {
+        filter: drop-shadow(0 0 2rem violet);
+    }
+    93.75% {
+        filter: drop-shadow(0 0 2rem chartreuse);
+    }
+    100% {
+        filter: drop-shadow(0 0 2rem cyan);
+    }
+}
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-3px, 3px);
+    }
+    40% {
+        transform: translate(-3px, -3px);
+    }
+    60% {
+        transform: translate(3px, 3px);
+    }
+    80% {
+        transform: translate(3px, -3px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes shift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+        transform: skewX(0deg);
+    }
+    41% {
+        transform: skewX(10deg);
+    }
+    42% {
+        transform: skewX(-10deg);
+    }
+    59% {
+        transform: skewX(40deg) skewY(10deg);
+    }
+    60% {
+        transform: skewX(-40deg) skewY(-10deg);
+    }
+    63% {
+        transform: skewX(10deg) skewY(-5deg);
+    }
+    70% {
+        transform: skewX(-50deg) skewY(-20deg);
+    }
+    71% {
+        transform: skewX(10deg) skewY(-10deg);
+    }
+}
