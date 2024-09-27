@@ -98,7 +98,7 @@ const imageUrls = [
             "img/Neonboy2.png",
             "img/Neinboy3.png",
             "img/Neonboy4.png",
-            "img/Neonboy5.png",
+           // "img/Neonboy5.png",
             "img/Murali2.png",
             "img/Murali3.png",
             "img/Murali4.png",
