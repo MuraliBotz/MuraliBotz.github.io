@@ -179,7 +179,7 @@ img {
     white-space: pre-wrap; 
     text-align: left; 
     font-family: serif;
-    position: relative;
+    position: absolute;
     top: 330px; 
     left: -15px; 
 }
