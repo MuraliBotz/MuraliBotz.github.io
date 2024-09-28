@@ -170,6 +170,7 @@ img {
 
 
 .myname {
+    display: flex;
     font-size: 25px;
     font-weight: 200;
     color: white; 
@@ -178,7 +179,7 @@ img {
     white-space: pre-wrap; 
     text-align: left; 
     font-family: serif;
-    position: absolute;
+    position: relative;
     top: 330px; 
     left: -15px; 
 }
