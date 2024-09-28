@@ -129,3 +129,23 @@
         transform: skewX(10deg) skewY(-10deg);
     }
 }
+
+
+
+@keyframes faceLift {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+@keyframes earLift {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+  
