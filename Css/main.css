@@ -170,9 +170,9 @@ img {
 
 
 .myname {
-    display: flex;
+    
     font-size: 25px;
-    font-weight: 200;
+    font-weight: 50;
     color: white; 
     margin-left: 10px;
     margin-top: 20px;
