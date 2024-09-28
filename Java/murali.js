@@ -19,49 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-const texts = ['Welcome To My PortFolio', 'My name is Murali', 'I\'m Not A Pro Coder'];
-let currentTextIndex = 0;
-let currentCharIndex = 0;
-const typingSpeed = 100; 
-const erasingSpeed = 50; 
-const delayBetweenTexts = 1000; 
-const typingTextElement = document.getElementById('typingText');
 
-
-function typeText() {
-    const currentText = texts[currentTextIndex];
-
-    
-    typingTextElement.innerHTML += currentText[currentCharIndex];
-    currentCharIndex++;
-
-    
-    if (currentCharIndex === currentText.length) {
-        setTimeout(eraseText, delayBetweenTexts); 
-    } else {
-        setTimeout(typeText, typingSpeed); 
-    }
-}
-
-
-function eraseText() {
-    const currentText = texts[currentTextIndex];
-
-    
-    typingTextElement.innerHTML = currentText.substring(0, currentCharIndex - 1);
-    currentCharIndex--;
-
-    
-    if (currentCharIndex === 0) {
-        currentTextIndex = (currentTextIndex + 1) % texts.length;
-        setTimeout(typeText, delayBetweenTexts); 
-    } else {
-        setTimeout(eraseText, erasingSpeed); 
-    }
-}
-
-
-typeText();
 
         
 function updateGreeting() {
