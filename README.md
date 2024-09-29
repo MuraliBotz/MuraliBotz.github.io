@@ -7,7 +7,7 @@
 </div>
 
 
-# 🌟 **Welcome to My Portfolio** 🌟
+
 
 ![Murali's Portfolio](img/main.png)
 
